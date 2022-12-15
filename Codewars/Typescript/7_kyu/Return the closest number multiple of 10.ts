@@ -13,3 +13,9 @@
 // 40
 
 // My Solution:
+export const closestMultiple10 = (num: number): number => {
+  if (num % 10 >= 5) {
+    return Math.ceil(num / 10) * 10;
+  }
+  return Math.floor(num / 10) * 10;
+};
