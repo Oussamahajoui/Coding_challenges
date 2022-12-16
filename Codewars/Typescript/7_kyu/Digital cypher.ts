@@ -35,3 +35,10 @@
 // Encode("masterpiece",1939);  ==>  [ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]
 
 // My Solution:
+export function encode(str: String, n: number): number[] {
+  const key: string = String(n);
+  return Array.from(
+    str,
+    (c, i) => c.charCodeAt(0) - 96 + Number(key[i % key.length])
+  );
+}
