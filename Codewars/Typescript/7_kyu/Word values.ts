@@ -12,3 +12,17 @@
 // Good luck!
 
 // My Solution:
+export function wordValue(arr: string[]): number[] {
+  const refLetter: string = "a";
+  const ref: number = refLetter.charCodeAt(0);
+  const res: number[] = arr.map((e, idx) => {
+    let totalVal = 0;
+    e = e.replaceAll(" ", "");
+    for (const c of e) {
+      const value = c.charCodeAt(0) - ref + 1;
+      totalVal += value;
+    }
+    return totalVal * (idx + 1);
+  });
+  return res;
+}
