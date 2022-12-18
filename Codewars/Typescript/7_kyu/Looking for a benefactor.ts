@@ -34,3 +34,10 @@
 // or return `-1` or ERROR or Nothing or None depending on the language.
 
 // My Solution:
+export function newAvg(arr: number[], newavg: number): number {
+  const x: number = newavg * (arr.length + 1) - arr.reduce((a, b) => a + b, 0);
+  if (x <= 0) {
+    throw new Error("Expected New Average is too low");
+  }
+  return Math.ceil(x);
+}
