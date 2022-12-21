@@ -25,3 +25,6 @@
 // potatoes(99, 100, 98) --> 50
 
 // My Solution:
+export function potatoes(p0: number, w0: number, p1: number): number {
+  return Math.floor((w0 * (100 - p0)) / (100 - p1));
+}
