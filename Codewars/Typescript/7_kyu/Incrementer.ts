@@ -13,3 +13,6 @@
 //                                        #  9+3 = 12  -->  2
 
 // My Solution:
+export function incrementer(nums: number[]) {
+  return nums.map((e, idx) => (e + idx + 1) % 10);
+}
