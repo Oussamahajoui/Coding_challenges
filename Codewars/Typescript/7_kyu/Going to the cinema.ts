@@ -21,3 +21,14 @@
 //     (with card the total price is 235, with tickets 240)
 
 // My Solution:
+export function movie(card: number, ticket: number, perc: number): number {
+  let costA: number = 0,
+    costB: number = card;
+  let n: number = 0;
+  while (Math.ceil(costB) >= costA) {
+    costA += ticket;
+    n += 1;
+    costB += ticket * Math.pow(perc, n);
+  }
+  return n;
+}
