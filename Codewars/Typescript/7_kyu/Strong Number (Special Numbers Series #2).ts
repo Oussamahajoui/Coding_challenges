@@ -13,3 +13,30 @@
 // 150 is not a strong number, because 1! + 5! + 0! = 122 is not equal to 150, so return "Not Strong !!".
 
 // My Solution:
+export const strongNumber = (num: number): string => {
+  const cache: Record<number, number> = {};
+  function factorize(x: number): number {
+    if (x in cache) {
+      return cache[x];
+    }
+
+    if (x < 0) {
+      return -1;
+    }
+    if (x === 0 || x === 1) {
+      return 1;
+    }
+
+    const res = factorize(x - 1) * x;
+    cache[x] = res;
+    return res;
+  }
+  const originalNum: number = num;
+  let value: number = 0;
+  while (num > 0) {
+    let digit: number = num % 10;
+    value += factorize(digit);
+    num = Math.floor(num / 10);
+  }
+  return value === originalNum ? "STRONG!!!!" : "Not Strong !!";
+};
