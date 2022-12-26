@@ -26,3 +26,13 @@
 // seven(477557101) should return [28, 7]
 
 // My Solution:
+export function seven(m: number): number[] {
+  let count: number = 0;
+  while (m > 99) {
+    let digit: number = m % 10;
+    let restM: number = Math.floor(m / 10);
+    m = restM - 2 * digit;
+    count += 1;
+  }
+  return [m, count];
+}
