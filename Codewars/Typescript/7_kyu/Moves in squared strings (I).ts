@@ -37,3 +37,18 @@
 // The input strings are separated by , instead of \n. The output strings should be separated by \r instead of \n. See "Sample Tests".
 
 // My Solution:
+export function vertMirror(strng: string) {
+  let res: string[] = [];
+  let words: string[] = strng.split("\n");
+  for (let word of words) {
+    res.push(word.split("").reverse().join(""));
+  }
+  return res.join("\n");
+}
+export function horMirror(strng: string) {
+  let words: string = strng.split("\n").reverse().join("\n");
+  return words;
+}
+export function oper(fct: (s: string) => string, s: string) {
+  return fct(s);
+}
