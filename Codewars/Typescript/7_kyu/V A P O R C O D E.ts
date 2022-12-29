@@ -10,3 +10,10 @@
 // "Why isn't my code working?"  -->  "W  H  Y  I  S  N  '  T  M  Y  C  O  D  E  W  O  R  K  I  N  G  ?"
 
 // My Solution:
+export function vaporcode(str: string): string {
+  return str
+    .replaceAll(" ", "")
+    .split("")
+    .map((e) => e.toUpperCase())
+    .join("  ");
+}
