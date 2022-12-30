@@ -11,3 +11,17 @@
 // Good luck!
 
 // My Solution:
+export function solve(arr: string[]): Number[] {
+  let res: number[] = [];
+  for (let word of arr) {
+    word = word.toLowerCase();
+    let val: number = 0;
+    for (let i = 0; i < word.length; i++) {
+      if (i === word[i].charCodeAt(0) - "a".charCodeAt(0)) {
+        val += 1;
+      }
+    }
+    res.push(val);
+  }
+  return res;
+}
