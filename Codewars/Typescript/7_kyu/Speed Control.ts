@@ -21,3 +21,15 @@
 // Happy coding!
 
 // My Solution:
+export const gps = (s: number, xs: number[]): number => {
+  if (xs.length <= 1) {
+    return 0;
+  }
+  let speeds: number[] = [];
+  for (let i = 0; i < xs.length - 1; i++) {
+    let section: number = xs[i + 1] - xs[i];
+    let val: number = (3600 * section) / s;
+    speeds.push(Math.floor(val));
+  }
+  return Math.max(...speeds);
+};
