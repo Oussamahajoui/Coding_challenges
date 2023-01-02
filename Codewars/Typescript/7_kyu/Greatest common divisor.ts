@@ -4,3 +4,6 @@
 // The inputs x and y are always greater or equal to 1, so the greatest common divisor will always be an integer that is also greater or equal to 1.
 
 // My Solution:
+export function mygcd(x: number, y: number): number {
+  return y === 0 ? x : mygcd(y, x % y);
+}
