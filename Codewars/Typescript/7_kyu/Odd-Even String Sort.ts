@@ -13,3 +13,14 @@
 // Tested strings are at least 8 characters long.
 
 // My Solution:
+export function sortMyString(s: string): string {
+  let leftS: string = s
+    .split("")
+    .filter((e, idx) => idx % 2 === 0)
+    .join("");
+  let rightS: string = s
+    .split("")
+    .filter((e, idx) => idx % 2 === 1)
+    .join("");
+  return leftS + " " + rightS;
+}
