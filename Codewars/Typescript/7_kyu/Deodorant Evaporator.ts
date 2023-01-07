@@ -11,3 +11,16 @@
 // Content is in fact not necessary in the body of the function "evaporator", you can use it or not use it, as you wish. Some people might prefer to reason with content, some other with percentages only. It's up to you but you must keep it as a parameter because the tests have it as an argument.
 
 // My Solution:
+export function evaporator(
+  content: number,
+  evapPerDay: number,
+  threshold: number
+): number {
+  let days: number = 0;
+  let start: number = 100;
+  while (start >= threshold) {
+    days += 1;
+    start -= start * (evapPerDay / 100);
+  }
+  return days;
+}
