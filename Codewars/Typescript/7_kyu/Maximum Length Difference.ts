@@ -14,3 +14,14 @@
 // output: number as a string
 
 // My Solution:
+export const mxdiflg = (a1: string[], a2: string[]): number => {
+  if (a1.length === 0 || a2.length === 0) {
+    return -1;
+  }
+  const l1: number[] = a1.map((str) => str.length);
+  const l2: number[] = a2.map((str) => str.length);
+  return Math.max(
+    Math.max(...l1) - Math.min(...l2),
+    Math.max(...l2) - Math.min(...l1)
+  );
+};
