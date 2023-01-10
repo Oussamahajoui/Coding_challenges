@@ -26,3 +26,6 @@
 // (185) is divisible by (37) , (185) is less than or equal to bound (200) , and (185) is > 0 .
 
 // My Solution:
+export function maxMultiple(divisor: number, bound: number): number {
+  return bound - (bound % divisor);
+}
