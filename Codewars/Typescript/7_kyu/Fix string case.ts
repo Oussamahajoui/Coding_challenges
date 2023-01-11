@@ -11,3 +11,8 @@
 // More examples in test cases. Good luck!
 
 // My Solution:
+export function solve(s: string): string {
+  let up: number = s.split("").filter((v) => "A" <= v && v <= "Z").length;
+  let down: number = s.split("").filter((v) => "a" <= v && v <= "z").length;
+  return down >= up ? s.toLowerCase() : s.toUpperCase();
+}
