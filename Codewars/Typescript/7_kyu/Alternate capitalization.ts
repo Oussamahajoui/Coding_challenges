@@ -8,3 +8,14 @@
 // Good luck!
 
 // My Solution:
+export function capitalize(s: string): [string, string] {
+  let evenOnes: string = s
+    .split("")
+    .map((e, idx) => (idx % 2 === 0 ? e.toUpperCase() : e))
+    .join("");
+  let oddOnes: string = s
+    .split("")
+    .map((e, idx) => (idx % 2 === 1 ? e.toUpperCase() : e))
+    .join("");
+  return [evenOnes, oddOnes];
+}
