@@ -11,3 +11,27 @@
 // Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
 
 // My Solution:
+export function divisors(n: number) {
+  let res: number = 0;
+  const sqrtN: number = Math.sqrt(n);
+  if (n % sqrtN === 0) {
+    res++;
+  }
+  for (let i = 1; i < sqrtN; i++) {
+    if (n % i === 0) {
+      res += 2;
+    }
+  }
+  return res;
+}
+
+// Better way:
+function divisors2(n: number) {
+  let steps = 0;
+
+  for (let i = 0; i <= n; i++) {
+    if (n % i === 0) steps++;
+  }
+
+  return steps;
+}
