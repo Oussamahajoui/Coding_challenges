@@ -64,3 +64,13 @@
 // 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
 
 // My Solution:
+export function SeriesSum(n: number): string {
+  if (n === 0) {
+    return "0.00";
+  }
+  let total: number = 1;
+  for (let i = 1; i < n; i++) {
+    total += 1 / (1 + 3 * i);
+  }
+  return `${total.toFixed(2)}`;
+}
