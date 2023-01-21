@@ -12,3 +12,8 @@
 // The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
 
 // My Solution:
+export function number(busStops: [number, number][]): number {
+  return busStops
+    .flat()
+    .reduce((a, b, index) => (index % 2 === 0 ? a + b : a - b), 0);
+}
