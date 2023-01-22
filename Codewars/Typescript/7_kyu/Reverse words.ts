@@ -6,3 +6,15 @@
 // "double  spaces"      ==> "elbuod  secaps"
 
 // My Solution:
+function reverseWord(s: string): string {
+  return s.split("").reverse().join("");
+}
+
+export function reverseWords(str: string): string {
+  let words: string[] = str.split(" ");
+  let res: string = "";
+  for (let w of words) {
+    res += " " + reverseWord(w);
+  }
+  return res.slice(1);
+}
