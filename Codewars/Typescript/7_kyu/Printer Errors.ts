@@ -17,3 +17,14 @@
 // printer_error(s) => "8/22"
 
 // My Solution:
+export function printerError(s: string): string {
+  let errors: number = 0;
+  for (const c of s) {
+    if (c > "m") {
+      errors += 1;
+    }
+  }
+  const strErrors: string = errors.toString();
+  const totalLength: string = s.length.toString();
+  return `${strErrors}/${totalLength}`;
+}
