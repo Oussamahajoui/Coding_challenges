@@ -13,3 +13,6 @@
 // 2 --> 3 + 5 = 8
 
 // My Solution:
+export function rowSumOddNumbers(n: number): number {
+  return n ** 3;
+}
