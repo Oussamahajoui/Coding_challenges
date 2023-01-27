@@ -10,3 +10,13 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 // My Solution
+export const longest = (s1: string, s2: string): string => {
+  let allLetters: string[] = [...s1, ...s2].sort((a, b) => a.localeCompare(b));
+  let res: string[] = [];
+  for (const c of allLetters) {
+    if (res.indexOf(c) === -1) {
+      res.push(c);
+    }
+  }
+  return res.join("");
+};
