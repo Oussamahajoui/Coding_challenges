@@ -13,3 +13,18 @@
 // Your function should only return a number, not the explanation about how you get that number.
 
 // My Solution:
+export function getSum(a: number, b: number): number {
+  if (a === b) {
+    return a;
+  }
+  if (a > b) {
+    let tmp = b;
+    b = a;
+    a = tmp;
+  }
+  let res = 0;
+  for (let i = a; i <= b; i++) {
+    res += i;
+  }
+  return res;
+}
