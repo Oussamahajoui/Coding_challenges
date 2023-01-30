@@ -13,3 +13,18 @@
 // "GTAT" --> "CATA"
 
 // My Solution:
+export class Kata {
+  static dnaStrand(dna: string) {
+    interface DnaLookup {
+      [key: string]: string;
+    }
+
+    const lookup: DnaLookup = { A: "T", T: "A", C: "G", G: "C" };
+
+    let res: string[] = [];
+    for (const c of dna) {
+      res.push(lookup[c]);
+    }
+    return res.join("");
+  }
+}
