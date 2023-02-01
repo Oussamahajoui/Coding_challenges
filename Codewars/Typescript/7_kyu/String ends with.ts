@@ -7,3 +7,6 @@
 // solution('abc', 'd') // returns false
 
 // My Solution:
+export function solution(str: string, ending: string): boolean {
+  return str.slice(str.length - ending.length, str.length) === ending;
+}
