@@ -11,3 +11,9 @@
 // Output string must be two numbers separated by a single space, and highest number is first.
 
 // My Solution:
+export class Kata {
+  static highAndLow(numbers: string): string {
+    let arr: number[] = numbers.split(" ").map((e) => parseFloat(e));
+    return `${Math.max(...arr)} ${Math.min(...arr)}`;
+  }
+}
