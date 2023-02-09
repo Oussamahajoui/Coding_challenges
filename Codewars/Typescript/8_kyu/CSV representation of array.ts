@@ -21,3 +21,6 @@
 // Note: you shouldn't escape the \n, it should work as a new line.
 
 // My Solution:
+export function toCsvText(array: number[][]): string {
+  return array.join("\n");
+}
