@@ -6,3 +6,10 @@
 // Function should return true if it is possible and false if not.
 
 // My Solution:
+export const zeroFuel = (
+  distance: number,
+  mpg: number,
+  fuelLeft: number
+): boolean => {
+  return distance <= mpg * fuelLeft;
+};
