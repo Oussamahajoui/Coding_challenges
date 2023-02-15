@@ -18,3 +18,25 @@
 // Note: newlines should be added between rows, but there should be no trailing newline at the end. If you're unsure about the format, look at the sample tests.
 
 // My Solution:
+export function multiTable(number: number): string {
+  let i = 1;
+  return `${i} * ${number} = ${i * number}\n${i + 1} * ${number} = ${
+    (i + 1) * number
+  }\n${i + 2} * ${number} = ${(i + 2) * number}\n${i + 3} * ${number} = ${
+    (i + 3) * number
+  }\n${i + 4} * ${number} = ${(i + 4) * number}\n${i + 5} * ${number} = ${
+    (i + 5) * number
+  }\n${i + 6} * ${number} = ${(i + 6) * number}\n${i + 7} * ${number} = ${
+    (i + 7) * number
+  }\n${i + 8} * ${number} = ${(i + 8) * number}\n${i + 9} * ${number} = ${
+    (i + 9) * number
+  }`;
+}
+
+//Better way:
+function multiTable2(number: number): string {
+  return Array.from(
+    { length: 10 },
+    (_, i) => `${i + 1} * ${number} = ${number * (i + 1)}`
+  ).join("\n");
+}
