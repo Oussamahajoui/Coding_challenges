@@ -21,3 +21,6 @@
 // expressionsMatter(9, 1, 1) ==> 18, because 9 * (1 + 1) = 18.
 
 // My Solution:
+export function expressionsMatter(a: number, b: number, c: number): number {
+  return Math.max((a + b) * c, a * b * c, a + b + c, a * (b + c));
+}
