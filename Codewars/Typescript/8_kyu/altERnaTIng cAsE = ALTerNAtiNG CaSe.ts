@@ -12,3 +12,17 @@
 // As usual, your function/method should be pure, i.e. it should not mutate the original string.
 
 // My Solution:
+export function toAlternatingCase(s: string): string {
+  let res: string[] = [];
+  function isUpperCase(x: string): boolean {
+    return x.toUpperCase() === x;
+  }
+  for (const c of s) {
+    if (isUpperCase(c)) {
+      res.push(c.toLowerCase());
+    } else {
+      res.push(c.toUpperCase());
+    }
+  }
+  return res.join("");
+}
