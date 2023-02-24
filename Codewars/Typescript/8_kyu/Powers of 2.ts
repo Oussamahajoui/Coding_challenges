@@ -7,3 +7,10 @@
 // n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
 
 // My Solution:
+export function powersOfTwo(n: number): number[] {
+  let res: number[] = [];
+  for (let i = 0; i <= n; i++) {
+    res.push(2 ** i);
+  }
+  return res;
+}
