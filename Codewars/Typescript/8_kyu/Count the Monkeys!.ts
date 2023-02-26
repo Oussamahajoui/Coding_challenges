@@ -9,3 +9,10 @@
 //  1 --> [1]
 
 // My Solution:
+export function monkeyCount(n: number): number[] {
+  let res: number[] = [];
+  for (let i: number = 1; i <= n; i++) {
+    res.push(i);
+  }
+  return res;
+}
