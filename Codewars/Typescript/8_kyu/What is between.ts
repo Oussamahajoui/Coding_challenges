@@ -8,3 +8,10 @@
 // --> [1, 2, 3, 4]
 
 // My Solution:
+export function between(a: number, b: number): number[] {
+  let res: number[] = [];
+  for (let i = a; i <= b; i++) {
+    res.push(i);
+  }
+  return res;
+}
