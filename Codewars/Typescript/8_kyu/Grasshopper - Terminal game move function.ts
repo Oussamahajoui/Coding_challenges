@@ -8,3 +8,6 @@
 // move(3, 6) should equal 15
 
 // My Solution:
+export function move(pos: number, roll: number): number {
+  return pos + 2 * roll;
+}
