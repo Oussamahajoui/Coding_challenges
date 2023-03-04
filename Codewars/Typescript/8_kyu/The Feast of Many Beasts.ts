@@ -6,3 +6,8 @@
 // Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
 
 // My Solution:
+export function feast(beast: string, dish: string): boolean {
+  return (
+    beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+  );
+}
