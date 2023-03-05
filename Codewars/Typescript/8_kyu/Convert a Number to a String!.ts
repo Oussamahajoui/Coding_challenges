@@ -9,3 +9,11 @@
 // -100 --> "-100"
 
 // My Solution:
+export function numberToString(num: number): string {
+  return String(num);
+}
+
+//Other way:
+function numberToString2(num: Number): string {
+  return num.toString();
+}
