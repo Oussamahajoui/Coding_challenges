@@ -28,3 +28,29 @@
 // The Office V - Find a Chair
 
 // My Solution:
+const pairs = {
+  accounts: 1,
+  finance: 2,
+  canteen: 10,
+  regulation: 3,
+  trading: 6,
+  change: 6,
+  IS: 8,
+  retail: 5,
+  cleaning: 4,
+  "pissing about": 25,
+};
+
+const boredom = (staff) => {
+  const boredomValues = Object.values(staff);
+  const boredomScore = boredomValues.reduce(
+    (accumulator, currentValue) => accumulator + pairs[currentValue],
+    0
+  );
+
+  return boredomScore <= 80
+    ? "kill me now"
+    : boredomScore < 100 && boredomScore > 80
+    ? "i can handle this"
+    : "party time!!";
+};
