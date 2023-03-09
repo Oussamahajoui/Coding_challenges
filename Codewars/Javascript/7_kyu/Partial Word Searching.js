@@ -9,3 +9,16 @@
 // If the string to search for is "me", and the array to search is ["home", "milk", "Mercury", "fish"], the method should return ["home", "Mercury"].
 
 // My Solution:
+function wordSearch(query, seq) {
+  let res = [];
+  for (const word of seq) {
+    if (word.toLowerCase().includes(query.toLowerCase())) {
+      res.push(word);
+    }
+  }
+  if (res.length < 1) {
+    return ["Empty"];
+  } else {
+    return res;
+  }
+}
