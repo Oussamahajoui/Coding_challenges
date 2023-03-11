@@ -13,3 +13,8 @@
 // Try to avoid using the % (modulo) operator.
 
 // My Solution:
+function divisibleByThree(str) {
+  let total = str.split("").reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
+  const divByThree = (total / 3).toFixed(2);
+  return divByThree * 3 === total;
+}
