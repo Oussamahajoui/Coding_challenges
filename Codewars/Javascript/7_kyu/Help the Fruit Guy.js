@@ -7,3 +7,15 @@
 // The returned array should be in lowercase.
 
 // My Solution:
+function removeRotten(bagOfFruits) {
+  if (!bagOfFruits || bagOfFruits.length < 1) {
+    return [];
+  }
+  let res = bagOfFruits.map((e) => {
+    if (e.startsWith("rotten")) {
+      return e.slice(6).toLowerCase();
+    }
+    return e.toLowerCase();
+  });
+  return res;
+}
