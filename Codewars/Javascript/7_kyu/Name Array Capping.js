@@ -7,3 +7,9 @@
 // capMe(['KARLY', 'DANIEL', 'KELSEY']) // returns ['Karly', 'Daniel', 'Kelsey']
 
 // My Solution:
+function capMe(names) {
+  let res = names.map((e) => {
+    return e.slice(0, 1).toUpperCase() + e.slice(1).toLowerCase();
+  });
+  return res;
+}
