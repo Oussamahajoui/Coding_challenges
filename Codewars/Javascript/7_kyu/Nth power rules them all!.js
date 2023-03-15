@@ -8,3 +8,12 @@
 // {1, 2}, 5     -->  (1^5 + 2^5) - (1 + 2)             -->  33 - 3  -->  30
 
 // My Solution:
+function modifiedSum(arr, n) {
+  let toDeduct = arr.reduce((a, b) => a + b, 0);
+  let total = arr
+    .map((e) => {
+      return Math.pow(e, n);
+    })
+    .reduce((a, b) => a + b, 0);
+  return total - toDeduct;
+}
