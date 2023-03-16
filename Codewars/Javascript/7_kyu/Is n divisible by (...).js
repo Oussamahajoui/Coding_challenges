@@ -9,3 +9,12 @@
 // (12,7)--> false because 12 is not divisible by 7
 
 // My Solution:
+function isDivisible(val, ...args) {
+  const values = [...args];
+  for (const c of values) {
+    if (val % c !== 0) {
+      return false;
+    }
+  }
+  return true;
+}
