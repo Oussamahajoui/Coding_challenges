@@ -14,3 +14,8 @@
 // capital(mixed_capitals)[1] // returns "The capital of Spain is Madrid"
 
 // My Solution:
+function capital(capitals) {
+  return capitals.map(
+    (c) => `The capital of ${c.state || c.country} is ${c.capital}`
+  );
+}
