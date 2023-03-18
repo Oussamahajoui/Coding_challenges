@@ -16,3 +16,16 @@
 // 'Vatsan took his dog for a spin'
 
 // My Solution:
+function sentence(arrayOfObjects) {
+  let res = "";
+  const myList = arrayOfObjects.sort((a, b) => {
+    const keyA = Object.keys(a)[0];
+    const keyB = Object.keys(b)[0];
+    return keyA - keyB;
+  });
+  for (const obj of myList) {
+    const value = Object.values(obj)[0];
+    res += value + " ";
+  }
+  return res.trim();
+}
