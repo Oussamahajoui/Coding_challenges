@@ -10,3 +10,22 @@
 //     ---> should return 1
 
 // My Solution:
+function solution(fullText, searchText) {
+  let res = 0;
+  let l = 0;
+  let r = searchText.length;
+  while (r <= fullText.length) {
+    const substring = fullText.slice(l, r);
+    if (substring === searchText) {
+      res++;
+    }
+    l++;
+    r++;
+  }
+  return res;
+}
+
+//Simpler way:
+function solution(fullText, searchText) {
+  return fullText.split(searchText).length - 1;
+}
