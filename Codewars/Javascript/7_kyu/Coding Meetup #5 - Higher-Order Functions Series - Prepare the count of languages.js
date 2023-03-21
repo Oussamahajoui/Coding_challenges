@@ -23,3 +23,21 @@
 // This kata is part of the Coding Meetup series which includes a number of short and easy to follow katas which have been designed to allow mastering the use of higher-order functions. In JavaScript this includes methods like: forEach, filter, map, reduce, some, every, find, findIndex. Other approaches to solving the katas are of course possible.
 
 // My Solution:
+function countLanguages(list) {
+  let res = {};
+  for (const l of list) {
+    if (l.language in res) {
+      res[l.language]++;
+    } else {
+      res[l.language] = 1;
+    }
+  }
+  return res;
+}
+
+//Shorter way:
+function countLanguages(list) {
+  let count = {};
+  list.forEach((x) => (count[x.language] = (count[x.language] || 0) + 1));
+  return count;
+}
