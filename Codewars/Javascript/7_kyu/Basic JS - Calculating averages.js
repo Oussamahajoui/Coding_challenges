@@ -9,3 +9,14 @@
 // It expects Calculator.average(3,4,5) to return 4.
 
 // My Solution:
+var Calculator = {
+  average: function (...args) {
+    if (args.length == 0) {
+      return 0;
+    } else {
+      const total = args.reduce((a, b) => a + b, 0);
+      const nb = args.length;
+      return total / nb;
+    }
+  },
+};
