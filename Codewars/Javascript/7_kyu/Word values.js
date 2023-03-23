@@ -12,3 +12,17 @@
 // Good luck!
 
 // My Solution:
+function wordValue(a) {
+  const refLetter = "a";
+  const ref = refLetter.charCodeAt(0);
+  const res = a.map((e, idx) => {
+    let totalVal = 0;
+    e = e.replaceAll(" ", "");
+    for (const c of e) {
+      const value = c.charCodeAt(0) - ref + 1;
+      totalVal += value;
+    }
+    return totalVal * (idx + 1);
+  });
+  return res;
+}
