@@ -12,3 +12,9 @@
 // obj2.test; // => 1
 
 // My Solution:
+var Singleton = function () {
+  if (Singleton.__instance) {
+    return Singleton.__instance;
+  }
+  Singleton.__instance = this;
+};
