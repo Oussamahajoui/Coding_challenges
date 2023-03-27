@@ -50,3 +50,14 @@
 // Note : The last element 2 is greater than the sum of its right elements (abstract zero).
 
 // My Solution:
+function arrayLeaders(numbers) {
+  let res = [];
+  for (let i = 0; i < numbers.length; i++) {
+    let val = numbers[i];
+    let competition = numbers.slice(i + 1).reduce((a, b) => a + b, 0);
+    if (val > competition) {
+      res.push(val);
+    }
+  }
+  return res;
+}
