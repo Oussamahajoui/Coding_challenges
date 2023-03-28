@@ -14,3 +14,21 @@
 // Array will always contain at least 2 floors. Random tests will contain 2-20 elements in array, and floor values between 0 and 30.
 
 // My Solution:
+function elevatorDistance(array) {
+  let res = 0;
+  for (let i = 0; i < array.length - 1; i++) {
+    let val1 = Math.max(array[i], array[i + 1]);
+    let val2 = Math.min(array[i], array[i + 1]);
+    res += val1 - val2;
+  }
+  return res;
+}
+
+// Using Absolute Value:
+function elevatorDistance(array) {
+  let distance = 0;
+  for (let i = 0; i < array.length - 1; i++) {
+    distance += Math.abs(array[i] - array[i + 1]);
+  }
+  return distance;
+}
