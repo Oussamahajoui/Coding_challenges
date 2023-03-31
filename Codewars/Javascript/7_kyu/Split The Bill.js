@@ -24,3 +24,17 @@
 // Good Luck and Happy Eats!
 
 // My Solution:
+function splitTheBill(x) {
+  let nbPeople = 0;
+  let total = 0;
+  for (const [key, value] of Object.entries(x)) {
+    total += value;
+    nbPeople++;
+  }
+  let Each = parseFloat((total / nbPeople).toFixed(2));
+  let res = {};
+  for (const [key, value] of Object.entries(x)) {
+    res[key] = parseFloat((value - Each).toFixed(2));
+  }
+  return res;
+}
