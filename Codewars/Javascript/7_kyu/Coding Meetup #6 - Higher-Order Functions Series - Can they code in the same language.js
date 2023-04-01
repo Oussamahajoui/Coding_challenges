@@ -22,3 +22,17 @@
 // This kata is part of the Coding Meetup series which includes a number of short and easy to follow katas which have been designed to allow mastering the use of higher-order functions. In JavaScript this includes methods like: forEach, filter, map, reduce, some, every, find, findIndex. Other approaches to solving the katas are of course possible.
 
 // My Solution:
+function isSameLanguage(list) {
+  const lang = list[0].language;
+  for (let i = 1; i < list.length; i++) {
+    if (list[i].language !== lang) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Shorter way:
+function isSameLanguage(list) {
+  return list.every((e) => e.language === list[0].language);
+}
