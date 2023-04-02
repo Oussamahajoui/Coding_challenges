@@ -12,3 +12,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 // My Solution:
+function searchNames(logins) {
+  return logins.filter((e) => e[0][e[0].length - 1] === "_");
+}
