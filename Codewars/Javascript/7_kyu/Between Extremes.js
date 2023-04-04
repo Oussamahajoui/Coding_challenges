@@ -10,3 +10,6 @@
 // The array will contain a minimum of two elements. Input data range guarantees that max-min will cause no integer overflow.
 
 // My Solution:
+function betweenExtremes(numbers) {
+  return Math.max(...numbers) - Math.min(...numbers);
+}
