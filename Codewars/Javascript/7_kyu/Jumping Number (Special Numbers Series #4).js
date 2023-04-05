@@ -40,3 +40,16 @@
 // Adjacent digits differ by 1
 
 // My Solution:
+function jumpingNumber(n) {
+  const strN = String(n);
+  if (strN.length < 2) {
+    return "Jumping!!";
+  }
+  const nArr = strN.split("");
+  for (let i = 0; i < nArr.length - 1; i++) {
+    if (Math.abs(parseFloat(nArr[i]) - parseFloat(nArr[i + 1])) !== 1) {
+      return "Not!!";
+    }
+  }
+  return "Jumping!!";
+}
