@@ -5,3 +5,8 @@
 // and for the list [1, 10, 3, 10, 10] the function should return 4.
 
 // My Solution:
+function sumNoDuplicates(numList) {
+  return numList
+    .filter((e) => numList.indexOf(e) === numList.lastIndexOf(e))
+    .reduce((a, b) => a + b, 0);
+}
