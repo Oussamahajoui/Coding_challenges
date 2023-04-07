@@ -15,3 +15,7 @@
 // t_copy = [1, 2, 3, 4]
 
 // My Solution:
+function copyList(l) {
+    if (!l) { throw new Error('New to have an array first ... ') }
+    return JSON.parse(JSON.stringify(l))
+}
