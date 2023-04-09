@@ -11,3 +11,15 @@
 // Your function should be case insensitive to the vowels.
 
 // My Solution:
+function vowel2index(str) {
+    const vowels = ['a', 'e', 'o', 'i', 'u']
+    let res = str.split('').map((e, i) => {
+        if (vowels.includes(e.toLowerCase())) {
+            return i + 1
+        }
+        else {
+            return e
+        }
+    })
+    return res.join('')
+}
