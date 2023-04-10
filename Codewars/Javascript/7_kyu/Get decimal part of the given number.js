@@ -8,3 +8,7 @@
 // getDecimal(-0.2) === 0.2
 
 // My Solution:
+function getDecimal(n) {
+    n = Math.abs(n)
+    return n - Math.floor(n)
+}
