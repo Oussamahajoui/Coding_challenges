@@ -10,3 +10,22 @@
 // Note that your boss is in the room (boss), their score is worth double it's face value (but they are still just one person!).
 
 // My Solution:
+function outed(meet, boss) {
+    let score = 0
+    const nbPeople = Object.keys(meet).length
+    for (const [key, value] of Object.entries(meet)) {
+        if (key === boss) {
+            score += value * 2
+        } else {
+            score += value
+        }
+    }
+    return score / nbPeople > 5 ? 'Nice Work Champ!' : 'Get Out Now!'
+}
+
+// Shorter way:
+function outed(meet, boss) {
+    let names = Object.keys(meet)
+    let score = names.reduce((s, v) => s + meet[v], 0) + meet[boss]
+    return score / names.length > 5 ? 'Nice Work Champ!' : 'Get Out Now!'
+}
