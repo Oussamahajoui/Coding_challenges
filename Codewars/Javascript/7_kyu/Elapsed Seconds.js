@@ -6,3 +6,6 @@
 // The start time will always be before the end time.
 
 // My Solution:
+function elapsedSeconds(startDate, endDate) {
+    return (endDate - startDate) / 1000
+}
