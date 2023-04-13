@@ -27,3 +27,6 @@
 // Hint: A friend of yours just told you about how javascript handles classes diferently from other programming languages. He couldn't stop ranting about "prototypes", or something like that. Maybe that could help you...
 
 // My Solution:
+Dog.prototype.bark = function () {
+    return "Woof!"
+}  
