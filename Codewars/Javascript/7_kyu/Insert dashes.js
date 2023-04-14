@@ -4,3 +4,17 @@
 // Note that the number will always be non-negative (>= 0).
 
 // My Solution:
+function insertDash(num) {
+    const numArr = num.toString().split('')
+    let res = []
+    res.push(numArr[0])
+    for (let i = 1; i < numArr.length; i++) {
+        if (parseFloat(numArr[i]) % 2 === 1 && parseFloat(numArr[i - 1]) % 2 === 1) {
+            res.push('-')
+            res.push(numArr[i])
+        } else {
+            res.push(numArr[i])
+        }
+    }
+    return res.join('')
+}
