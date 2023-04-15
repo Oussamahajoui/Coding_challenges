@@ -6,3 +6,8 @@
 // last ['x', 'y', 'z']  -- => 'z'
 
 // My Solution:
+function last(first, ...rest) {
+    if (rest.length) return rest.pop();
+    if (first.length) return [...first].pop();
+    return first;
+}
