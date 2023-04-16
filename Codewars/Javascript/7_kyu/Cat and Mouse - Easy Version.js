@@ -8,3 +8,8 @@
 // C...m returns 'Caught!' <-- as there are three characters between the two, the cat can jump.
 
 // My Solution:
+function catMouse(x) {
+    return x.split('')
+        .slice(x.indexOf('C') + 1, x.indexOf('m'))
+        .length > 3 ? 'Escaped!' : 'Caught!'
+}
