@@ -9,3 +9,10 @@
 // [5.0, 10.0, 15.0]
 
 // My Solution:
+function multiples(m, n) {
+    let res = []
+    for (let i = 1; i <= m; i++) {
+        res.push(i * n)
+    }
+    return res
+}
