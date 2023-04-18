@@ -11,3 +11,18 @@
 // The combine function should be a good citizen, so should not mutate the input objects.
 
 // My Solution:
+function combine(...args) {
+    let res = {}
+    let argArray = [...args]
+    for (let i = 0; i < argArray.length; i++) {
+        for (let key in argArray[i]) {
+            if (!res[key]) {
+                res[key] = argArray[i][key];
+            }
+            else {
+                res[key] += argArray[i][key];
+            }
+        }
+    }
+    return res
+}
