@@ -35,3 +35,14 @@
 // specialNumber(709) ==> return "NOT!!"
 
 // My Solution:
+function specialNumber(n) {
+    const notSpecial = [6, 7, 8, 9]
+    let arrN = n.toString().split('')
+    for (let e of arrN) {
+        if (notSpecial.includes(parseFloat(e))) {
+            return "NOT!!";
+        }
+    }
+
+    return "Special!!";
+}
