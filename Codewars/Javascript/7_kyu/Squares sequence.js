@@ -6,3 +6,14 @@
 // 3, 3  -->  [3, 9, 81]
 
 // My Solution:
+function squares(x, n) {
+    let res = []
+    if (n <= 0) {
+        return []
+    }
+    res.push(x)
+    for (let i = 2; i <= n; i++) {
+        res.push(res[res.length - 1] ** 2)
+    }
+    return res
+}
