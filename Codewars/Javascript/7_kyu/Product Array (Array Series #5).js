@@ -36,3 +36,11 @@
 // Finally ,The Fifth element 900 is the product of all array's elements except the fifth element 2
 
 // My Solution:
+function productArray(numbers) {
+    return numbers.map((e, idx) => {
+        const left = numbers.slice(0, idx)
+        const right = numbers.slice(idx + 1)
+        const prods = left.concat(right).reduce((a, b) => a * b, 1)
+        return prods
+    })
+}
