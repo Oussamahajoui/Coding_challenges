@@ -16,3 +16,31 @@
 // 12  -->  "CoffeeScript"
 
 // My Solution:
+function caffeineBuzz(n) {
+    const cof = "Coffee"
+    const java = "Java"
+    const script = "Script"
+    if (n % 3 === 0 && n % 4 === 0) {
+        if (n % 2 === 0) {
+            return cof + script
+        } else {
+            return cof
+        }
+    }
+    else if (n % 3 === 0) {
+        if (n % 2 === 0) {
+            return java + script
+        } else {
+            return java
+        }
+    }
+    return "mocha_missing!"
+}
+
+//Simpler way:
+function caffeineBuzz(n) {
+    if (n % 12 === 0) return "CoffeeScript";
+    if (n % 6 === 0) return "JavaScript";
+    if (n % 3 === 0) return "Java";
+    return "mocha_missing!";
+}
