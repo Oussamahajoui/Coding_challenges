@@ -8,3 +8,13 @@
 // var array = [["white", "goodness"], ...] //returns [{white: 'goodness'}, ...]
 
 // My Solution:
+function colourAssociation(array) {
+    let res = []
+    for (const el of array) {
+        res.push({ [el[0]]: el[1] })
+    }
+    return res
+}
+
+// Other solution:
+const colourAssociation = array => array.map(([colour, association]) => ({ [colour]: association }))
