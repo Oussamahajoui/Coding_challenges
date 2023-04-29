@@ -24,3 +24,11 @@
 // This kata is part of the Coding Meetup series which includes a number of short and easy to follow katas which have been designed to allow mastering the use of higher-order functions. In JavaScript this includes methods like: forEach, filter, map, reduce, some, every, find, findIndex. Other approaches to solving the katas are of course possible.
 
 // My Solution:
+function getFirstPython(list) {
+    for (const obj of list) {
+        if (obj.language == 'Python') {
+            return `${obj.firstName}, ${obj.country}`
+        }
+    }
+    return "There will be no Python developers"
+}
