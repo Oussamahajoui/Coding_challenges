@@ -19,3 +19,9 @@
 // Since , 5^1 + 6^2 + 4^3 = 10^5 != 564 , thus output is "Not !!"
 
 // My Solution:
+function disariumNumber(n) {
+    let strN = n.toString()
+    let strArr = strN.split('')
+    let val = strArr.map((e, idx) => parseFloat(e) ** (idx + 1)).reduce((a, b) => a + b, 0)
+    return val == n ? "Disarium !!" : "Not !!"
+}
