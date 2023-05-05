@@ -17,3 +17,10 @@
 // There can be duplicate letters and numbers.
 
 // My Solution:
+function lastSurvivor(letters, coords) {
+    let string = letters
+    for (const c of coords) {
+        string = string.slice(0, c) + string.slice(c + 1)
+    }
+    return string
+} 
