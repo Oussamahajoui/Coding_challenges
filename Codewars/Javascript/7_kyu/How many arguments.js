@@ -6,3 +6,6 @@
 // args_count('a', 'b') --> 2
 
 // My Solution:
+function args_count(...args) {
+    return [...args].length
+}
