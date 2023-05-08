@@ -15,3 +15,10 @@
 // return the name of the one killer, in our case 'James' because he is the only person that saw both 'Lucas' and 'Bill'
 
 // My Solution:
+function killer(suspectInfo, dead) {
+    for (const [suspect, names] of Object.entries(suspectInfo)) {
+        if (names.includes(...dead)) {
+            return suspect
+        }
+    }
+}
