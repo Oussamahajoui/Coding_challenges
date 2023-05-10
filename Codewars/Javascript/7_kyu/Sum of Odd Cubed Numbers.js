@@ -3,3 +3,11 @@
 
 
 // My Solution:
+function cubeOdd(arr) {
+    let res = arr
+        .filter((e) => e % 2 !== 0)
+        .map((e) => e ** 3)
+        .reduce((a, b) => a + b, 0)
+
+    return isNaN(res) ? undefined : res;
+}
