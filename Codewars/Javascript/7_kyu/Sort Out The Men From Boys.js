@@ -37,3 +37,8 @@
 
 
 // My Solution:
+function menFromBoys(arr) {
+    let men = [...new Set(arr.filter((e) => e % 2 === 0).sort((a, b) => a - b))]
+    let boys = [...new Set(arr.filter((e) => e % 2 !== 0).sort((a, b) => b - a))]
+    return [...men, ...boys]
+}
