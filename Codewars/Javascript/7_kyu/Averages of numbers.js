@@ -12,3 +12,10 @@
 // Have fun coding it and please don't forget to vote and rank this kata! :-)
 
 // My Solution:
+function averages(numbers) {
+    if (!numbers) {
+        return []
+    }
+    let res = numbers.map((e, idx) => (e + numbers[idx + 1]) / 2)
+    return res.slice(0, -1)
+}
