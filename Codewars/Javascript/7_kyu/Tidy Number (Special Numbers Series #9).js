@@ -34,3 +34,8 @@
 // The number's digits {2 , 3, 3, 5} are in non-Decreasing Order , Note 3 <= 3
 
 // My Solution:
+function tidyNumber(n) {
+    let strN = String(n)
+    let tidyN = strN.split('').sort((a, b) => a - b).join('')
+    return n === parseInt(tidyN)
+}
