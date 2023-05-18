@@ -4,3 +4,8 @@
 // Note: only positive integers will be tested.
 
 // My Solution:
+function sumOfIntegersInString(s) {
+    return s.split(/[^0-9]/g).map((e) => parseFloat(e)).filter(Boolean).reduce((a, b) => a + b, 0)
+}
+
+// The Boolean filter trick is very useful in this case
