@@ -7,3 +7,6 @@
 // * [8, 2, 7, 2, 3, 4, 6, 5, 4, 4, 1, 2, 3], [2, 4, 3] -> [8, 7, 6, 5, 1]
 
 // My Solution:
+Array.prototype.remove_ = function (integer_list, values_list) {
+    return integer_list.filter((e) => !values_list.includes(e))
+}
