@@ -11,3 +11,16 @@
 // vowelOne( "aeiou, abc" ) // "1111100100"
 
 // My Solution:
+function vowelOne(s) {
+    const vowels = 'aeiou'
+    let res = ''
+    for (let c of s) {
+        c = c.toLowerCase()
+        if (vowels.includes(c)) {
+            res += '1'
+        } else {
+            res += '0'
+        }
+    }
+    return res
+}
