@@ -40,3 +40,8 @@
 
 
 // My Solution:
+function automorphic(n) {
+    let squaredN = n * n
+    let lastNDigits = String(squaredN).split('').slice(-String(n).length).join('')
+    return lastNDigits === String(n) ? "Automorphic" : "Not!!"
+}
