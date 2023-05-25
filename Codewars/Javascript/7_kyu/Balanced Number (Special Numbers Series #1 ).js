@@ -35,3 +35,16 @@
 // 10 and 20 are not equal, so it's not balanced.
 
 // My Solution:
+function balancedNum(number) {
+    let strNumArr = String(number).split('')
+    let sumLeft = 0
+    let sumRight = 0
+    if (strNumArr.length % 2 === 0) { // 1301  3 / 2 = 1
+        sumLeft = strNumArr.slice(0, Math.floor(strNumArr.length / 2) - 1).map((e) => parseFloat(e)).reduce((a, b) => a + b, 0)
+        sumRight = strNumArr.slice(Math.floor(strNumArr.length / 2) + 1).map((e) => parseFloat(e)).reduce((a, b) => a + b, 0)
+    } else { // 92645  5 / 2 = 2
+        sumLeft = strNumArr.slice(0, Math.floor(strNumArr.length / 2)).map((e) => parseFloat(e)).reduce((a, b) => a + b, 0)
+        sumRight = strNumArr.slice(Math.floor(strNumArr.length / 2) + 1).map((e) => parseFloat(e)).reduce((a, b) => a + b, 0)
+    }
+    return sumLeft === sumRight ? "Balanced" : "Not Balanced"
+}
