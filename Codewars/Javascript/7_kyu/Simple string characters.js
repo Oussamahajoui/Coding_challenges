@@ -8,3 +8,10 @@
 // Good luck!
 
 // My Solution:
+function solve(s) {
+    const upper = (s.match(/[A-Z]/g) || []).length
+    const lower = (s.match(/[a-z]/g) || []).length
+    const nums = (s.match(/[0-9]/g) || []).length
+    const special = s.length - upper - lower - nums
+    return [upper, lower, nums, special]
+}
