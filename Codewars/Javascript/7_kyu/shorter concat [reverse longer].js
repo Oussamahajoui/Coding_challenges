@@ -7,3 +7,14 @@
 // If a and b have the same length treat a as the longer producing b+reverse(a)+b
 
 // My Solution:
+function shorterReverseLonger(a, b) {
+    let shorter = '', longer = ''
+    if (a.length < b.length) {
+        shorter = a
+        longer = b
+    } else {
+        shorter = b
+        longer = a
+    }
+    return `${shorter}${longer.split('').reverse().join('')}${shorter}`
+}
