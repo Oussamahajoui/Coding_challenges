@@ -16,3 +16,12 @@
 //                        6
 
 // My Solution:
+function calc(x) {
+    let total1 = ''
+    for (let i = 0; i < x.length; i++) {
+        total1 += x.charCodeAt(i)
+    }
+    let total2 = total1.replaceAll('7', '1')
+    let res = total1.split('').map((e) => parseFloat(e)).reduce((a, b) => a + b, 0) - total2.split('').map((e) => parseFloat(e)).reduce((a, b) => a + b, 0)
+    return res
+}
