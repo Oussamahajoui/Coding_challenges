@@ -7,3 +7,6 @@
 // sum(1, 2, 3, 4, 5) // => 15
 
 // My Solution:
+function sum(...args) {
+    return [...args].reduce((a, b) => a + b, 0)
+}
