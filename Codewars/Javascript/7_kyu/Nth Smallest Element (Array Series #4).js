@@ -15,3 +15,6 @@
 // arr=[2,1,3,3,1,2],     n=3    ==> return 2
 
 // My Solution:
+function nthSmallest(arr, pos) {
+    return arr.sort((a, b) => a - b)[pos - 1]
+}
