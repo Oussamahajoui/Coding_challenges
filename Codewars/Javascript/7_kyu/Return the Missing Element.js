@@ -10,3 +10,21 @@
 // [9, 2, 4, 5, 7, 0, 8, 6, 1] --> 3
 
 // My Solution:
+function getMissingElement(superImportantArray) {
+    let mySet = new Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    for (let i = 0; i < superImportantArray.length; i++) {
+        let c = superImportantArray[i]
+        if (mySet.has(c)) {
+            mySet.delete(c)
+        }
+    }
+    let res = Array.from(mySet)
+    return res[0]
+}
+
+// Other way:
+function getMissingElement(superImportantArray) {
+    for (i = 0; i < 10; i++) {
+        if (superImportantArray.indexOf(i) === -1) return i;
+    }
+}
