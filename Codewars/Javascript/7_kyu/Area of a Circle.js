@@ -13,3 +13,9 @@
 // circleArea(-1);          // throws Error
 
 // My Solution:
+function circleArea(radius) {
+    if (radius <= 0) {
+        throw new Error("radius can't be negative");
+    }
+    return radius ** 2 * Math.PI
+}
