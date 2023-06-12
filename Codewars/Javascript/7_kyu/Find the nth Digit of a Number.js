@@ -15,3 +15,17 @@
 // 24, -8 --> -1
 
 // My Solution:
+function findDigit(num, nth) {
+    if (nth <= 0) {
+        return -1
+    }
+    num = Math.abs(num)
+    while (nth > 0) {
+        let digit = num % 10
+        num = Math.floor(num / 10)
+        nth -= 1
+        if (nth === 0) {
+            return digit
+        }
+    }
+}
