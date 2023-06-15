@@ -26,3 +26,13 @@
 // seven(477557101) should return [28, 7]
 
 // My Solution:
+function seven(m) {
+    let count = 0
+    while (m > 99) {
+        let digit = m % 10
+        let restM = Math.floor(m / 10)
+        m = restM - 2 * digit
+        count += 1
+    }
+    return [m, count]
+}
