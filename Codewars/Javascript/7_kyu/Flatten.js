@@ -5,3 +5,6 @@
 // flatten [[[1,2,3]]] # => [[1,2,3]]
 
 // My Solution:
+var flatten = function (array) {
+    return array.flat()
+}
