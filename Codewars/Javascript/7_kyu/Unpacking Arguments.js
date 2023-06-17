@@ -8,3 +8,6 @@
 // someFunction(1, true, "Foo", "bar")
 
 // My Solution:
+function spread(func, args) {
+    return func(...args)
+}
