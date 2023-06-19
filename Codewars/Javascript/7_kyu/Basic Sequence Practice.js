@@ -14,3 +14,11 @@
 //  7  -->  [0,  1,  3,  6,  10,  15,  21,  28]
 
 // My Solution:
+function sumOfN(n) {
+    let res = [0]
+    for (let i = 1; i <= Math.abs(n); i++) {
+        let val = res[i - 1] + i * Math.sign(n)
+        res.push(val)
+    }
+    return res
+}
