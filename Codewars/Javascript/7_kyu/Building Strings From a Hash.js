@@ -8,3 +8,10 @@
 // solution({a: 1, b: '2'}) // should return "a = 1,b = 2"
 
 // My Solution:
+function solution(pairs) {
+    let res = ''
+    for (const [key, value] of Object.entries(pairs)) {
+        res += `${key} = ${value},`
+    }
+    return res.slice(0, -1)
+}
