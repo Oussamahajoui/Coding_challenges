@@ -34,3 +34,73 @@
 // Dogs have an identical introduce/Introduce method as any other animal, but they have their own method called greetMaster/GreetMaster which accepts no arguments and returns "Hello (insert_master_name_here)" (of course not the literal string but replace the (insert_master_name_here) with the name of the dog's master).
 
 // My Solution:
+// Get Coding :)
+
+class Shark extends Animal {
+    constructor(name, age, status) {
+        super();
+        this.name = name
+        this.age = age
+        this.status = status
+        this.species = "shark"
+        this.legs = 0
+    }
+}
+
+class Cat extends Animal {
+    constructor(name, age, status) {
+        super();
+        this.name = name
+        this.age = age
+        this.status = status
+        this.species = "cat"
+        this.legs = 4
+    }
+    introduce() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.  Meow meow!`;
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, age, status, master = '') {
+        super();
+        this.master = master;
+        this.name = name;
+        this.age = age;
+        this.status = status;
+        this.legs = 4;
+        this.species = 'dog';
+    }
+    introduce() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+    greetMaster() {
+        return `Hello ${this.master}`;
+    }
+}
+
+//Better way:
+class Shark extends Animal {
+    constructor(name, age, status) {
+        super(name, age, 0, "shark", status);
+    }
+}
+
+class Cat extends Animal {
+    constructor(name, age, status) {
+        super(name, age, 4, "cat", status);
+    }
+    introduce() {
+        return `${super.introduce()}  Meow meow!`;
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, age, status, master) {
+        super(name, age, 4, "dog", status);
+        this.master = master;
+    }
+    greetMaster() {
+        return `Hello ${this.master}`;
+    }
+}
