@@ -8,3 +8,15 @@
 // orderedCount("abracadabra") == [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
 
 // My Solution:
+const orderedCount = function (text) {
+    let res = []
+    let visited = new Set()
+    for (let c of text) {
+        if (!visited.has(c)) {
+            visited.add(c)
+            let count = text.split('').filter((e) => e === c).length
+            res.push([c, count])
+        }
+    }
+    return res
+}
