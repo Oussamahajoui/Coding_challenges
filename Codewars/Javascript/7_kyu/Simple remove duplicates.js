@@ -14,3 +14,18 @@
 // Good luck!
 
 // My Solution:
+function solve(arr) {
+    let mySet = new Set()
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (!mySet.has(arr[i])) {
+            mySet.add(arr[i])
+        }
+    }
+    let res = Array.from(mySet)
+    return res.reverse()
+}
+
+//Simpler way:
+function solve(arr) {
+    return arr.filter((val, i) => arr.lastIndexOf(val) == i);
+}
