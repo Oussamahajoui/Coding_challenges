@@ -7,3 +7,7 @@
 // min([1,2,3,4,5], 'index') // => 0
 
 // My Solution:
+function min(arr, toReturn) {
+    let smallest = Math.min(...arr)
+    return toReturn === 'value' ? smallest : arr.indexOf(smallest)
+}
