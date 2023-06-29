@@ -11,3 +11,6 @@
 // Note that you can receive floats as well.
 
 // My Solution:
+function toNumberArray(stringarray) {
+    return stringarray.map((e) => parseFloat(e))
+}
