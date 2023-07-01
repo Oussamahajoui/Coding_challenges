@@ -11,3 +11,11 @@
 // Here's a nice Youtube video about currying, which might help you if this is new to you.
 
 // My Solution:
+function multiplyAll(arr) {
+    return function multiply(val) {
+        return arr.map(e => e * val)
+    }
+}
+
+// Other way:
+multiplyAll = a => x => a.map(e => e * x);
