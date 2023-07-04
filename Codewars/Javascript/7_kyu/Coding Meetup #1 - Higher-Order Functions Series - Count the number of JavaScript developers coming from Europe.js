@@ -26,3 +26,18 @@
 // This kata is part of the Coding Meetup series which includes a number of short and easy to follow katas which have been designed to allow mastering the use of higher-order functions. In JavaScript this includes methods like: forEach, filter, map, reduce, some, every, find, findIndex. Other approaches to solving the katas are of course possible.
 
 // My Solution:
+function countDevelopers(list) {
+    let res = 0
+    for (let i = 0; i < list.length; i++) {
+        const developer = list[i];
+        if (developer.continent === 'Europe' && developer.language === 'JavaScript') {
+            res += 1;
+        }
+    }
+    return res
+}
+
+//Better way:
+function countDevelopers(list) {
+    return list.filter(x => x.continent == 'Europe' && x.language == 'JavaScript').length
+}
