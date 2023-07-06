@@ -21,3 +21,15 @@
 // Happy coding!
 
 // My Solution:
+function gps(s, x) {
+    if (x.length <= 1) {
+        return 0;
+    }
+    let speeds = []
+    for (let i = 0; i < x.length - 1; i++) {
+        let section = x[i + 1] - x[i]
+        let val = (3600 * section) / s
+        speeds.push(Math.floor(val))
+    }
+    return Math.max(...speeds)
+}
