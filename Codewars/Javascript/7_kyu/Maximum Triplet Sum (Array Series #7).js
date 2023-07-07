@@ -29,3 +29,10 @@
 // Note : duplications are not included when summing , (i.e) the numbers added only once .
 
 // My Solution:
+function maxTriSum(numbers) {
+    let mySet = new Set(numbers)
+    let myNums = Array.from(mySet)
+    myNums.sort((a, b) => b - a)
+    let res = myNums.slice(0, 3).reduce((a, b) => a + b, 0)
+    return res
+}
