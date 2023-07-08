@@ -16,3 +16,11 @@
 // The minimum sum obtained from summing each two integers product ,  9*0 + 8*2 +7*4 +6*5 = 74
 
 // My Solution:
+function minSum(arr) {
+    const sorted = arr.sort((a, b) => a - b)
+    let sum = 0;
+    for (let i = 0; i < arr.length / 2; i++) {
+        sum += sorted[i] * sorted[sorted.length - 1 - i]
+    }
+    return sum
+}
