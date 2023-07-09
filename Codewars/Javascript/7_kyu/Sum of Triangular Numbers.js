@@ -14,3 +14,6 @@
 // Triangular Numbers cannot be negative so return 0 if a negative number is given.
 
 // My Solution:
+function sumTriangularNumbers(n) {
+    return n < 0 ? 0 : n * (n + 1) * (n + 2) / 6;
+}
