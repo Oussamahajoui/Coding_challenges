@@ -28,3 +28,7 @@
 // Most tests consist of 100 randomly generated arrays, each with four tests, one for each operation. There are 400 tests overall. No empty arrays will be given. Haskell has QuickCheck tests
 
 // My Solution:
+const head = (arr) => arr[0]
+const last = (arr) => arr[arr.length - 1]
+const tail = (arr) => arr.slice(1)
+const init = (arr) => arr.slice(0, -1)
