@@ -7,3 +7,20 @@
 // 'aabacbaa' --> 'bbabcabb'
 
 // My Solution:
+function switcheroo(x) {
+    let res = x.split('').map((e) => {
+        if (e === 'a') {
+            return 'b'
+        } else if (e === 'b') {
+            return 'a'
+        } else {
+            return e
+        }
+    }).join('')
+    return res
+}
+
+// One line:
+function switcheroo(x) {
+    return [...x].map(v => v == 'a' ? v = 'b' : v == 'b' ? v = 'a' : v).join('');
+}
