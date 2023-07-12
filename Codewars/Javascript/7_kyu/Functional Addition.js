@@ -10,3 +10,8 @@
 // addThree(3); // 6
 
 // My Solution:
+function add(n) {
+    return function (x) {
+        return n + x
+    }
+}
