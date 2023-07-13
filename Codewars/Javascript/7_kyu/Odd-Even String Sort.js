@@ -13,3 +13,8 @@
 // Tested strings are at least 8 characters long.
 
 // My Solution:
+function sortMyString(S) {
+    let leftS = S.split('').filter((e, idx) => idx % 2 === 0).join('')
+    let rightS = S.split('').filter((e, idx) => idx % 2 === 1).join('')
+    return leftS + ' ' + rightS
+}
