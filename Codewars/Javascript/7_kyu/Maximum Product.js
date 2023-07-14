@@ -20,3 +20,7 @@
 // The maximum product obtained from multiplying -2 * 7 = -14, and they're adjacent numbers in the array
 
 // My Solution:
+function adjacentElementsProduct(array) {
+    let newArr = array.map((e, idx) => e * array[idx + 1]).slice(0, -1)
+    return Math.max(...newArr)
+}
