@@ -6,3 +6,17 @@
 // "102269" should return "12222666666999999999"
 
 // My Solution:
+function explode(s) {
+    let res = ""
+    for (let c of s) {
+        for (let count = 1; count <= Number(c); count++) {
+            res += c
+        }
+    }
+    return res
+}
+
+//More JS way:
+function explode(s) {
+    return s.split("").map((e) => e.repeat(+e)).join("");
+}
