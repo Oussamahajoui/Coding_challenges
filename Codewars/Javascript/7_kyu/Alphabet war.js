@@ -27,3 +27,27 @@
 // alphabetWar("wwwwwwz");  //=> Left side wins!
 
 // My Solution:
+function alphabetWar(fight) {
+    const leftSide = {
+        'w': 4,
+        'p': 3,
+        'b': 2,
+        's': 1
+    }
+    const rightSide = {
+        'm': 4,
+        'q': 3,
+        'd': 2,
+        'z': 1
+    }
+    let leftSideScore = 0, rightSideScore = 0
+    for (const c of fight) {
+        if (c in leftSide) {
+            leftSideScore += leftSide[c]
+        } else if (c in rightSide) {
+            rightSideScore += rightSide[c]
+        }
+    }
+    return rightSideScore > leftSideScore ? 'Right side wins!' :
+        leftSideScore > rightSideScore ? 'Left side wins!' : "Let's fight again!"
+}
