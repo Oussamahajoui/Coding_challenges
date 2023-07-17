@@ -8,3 +8,7 @@
 // Input sequence contains minimum two elements and every element is an integer.
 
 // My Solution:
+function largestPairSum(numbers) {
+    let biggestNums = [...numbers].sort((a, b) => b - a).slice(0, 2)
+    return biggestNums.reduce((a, b) => a + b, 0)
+}
