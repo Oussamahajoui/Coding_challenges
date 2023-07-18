@@ -13,3 +13,14 @@
 // This is indexed from [1..n] (not zero indexed!)
 
 // My Solution:
+function vowelIndices(word) {
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    let res = []
+    for (let i = 0; i < word.length; i++) {
+        let char = word[i].toLowerCase()
+        if (vowels.includes(char)) {
+            res.push(i + 1)
+        }
+    }
+    return res
+}
