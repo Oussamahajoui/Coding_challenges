@@ -9,3 +9,20 @@
 // +++
 
 // My Solution:
+function generateShape(integer) {
+    const ROWS = integer
+    const COLS = integer
+    let res = ''
+    for (let r = 0; r < ROWS; r++) {
+        res += '\n'
+        for (let c = 0; c < COLS; c++) {
+            res += '+'
+        }
+    }
+    return res.slice(1)
+}
+
+// More JS way:
+function generateShape(n) {
+    return ("+".repeat(n) + "\n").repeat(n).trim()
+}
