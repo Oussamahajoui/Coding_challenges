@@ -12,3 +12,13 @@
 // The input will always be made of only lowercase letters and will never be empty.
 
 // My Solution:
+function wordsToMarks(string) {
+    let res = 0
+    for (let c of string) {
+        let ref = 'a'
+        let refVal = ref.charCodeAt(0)
+        let charVal = c.charCodeAt(0) + 1
+        res += (charVal - refVal)
+    }
+    return res
+}
