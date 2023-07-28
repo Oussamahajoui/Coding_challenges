@@ -12,3 +12,9 @@
 // Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
 
 // My Solution:
+function isPowerOfTwo(n) {
+    if (n < 0) {
+        return false
+    }
+    return Number.isInteger(Math.log2(n))
+}
