@@ -13,3 +13,19 @@
 // fizzbuzz(3) -->  [1, 2, "Fizz"]
 
 // My Solution:
+// Return an array
+function fizzbuzz(n) {
+    let res = []
+    for (let i = 1; i <= n; i++) {
+        if (i % 5 === 0 && i % 3 === 0) {
+            res.push('FizzBuzz')
+        } else if (i % 5 === 0) {
+            res.push('Buzz')
+        } else if (i % 3 === 0) {
+            res.push('Fizz')
+        } else {
+            res.push(i)
+        }
+    }
+    return res
+}
