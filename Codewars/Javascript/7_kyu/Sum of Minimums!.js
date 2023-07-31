@@ -14,3 +14,15 @@
 // ENJOY CODING :)
 
 // My Solution:
+function sumOfMinimums(arrays) {
+    let res = 0
+    for (let arr of arrays) {
+        res += Math.min(...arr)
+    }
+    return res
+}
+
+//Other way:
+function sumOfMinimums(arr) {
+    return arr.reduce((p, c) => p + Math.min(...c), 0);
+}
