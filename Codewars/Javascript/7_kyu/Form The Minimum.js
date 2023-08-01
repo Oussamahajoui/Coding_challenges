@@ -18,3 +18,9 @@
 // (134679) is the minimum number could be formed from {1, 9, 3, 1, 7, 4, 6, 6, 7} , Without duplications
 
 // My Solution:
+function minValue(values) {
+    let mySet = new Set(values)
+    let myDigits = Array.from(mySet).sort((a, b) => a - b)
+    let resArr = myDigits.map((e) => e.toString()).join('')
+    return parseFloat(resArr)
+}
