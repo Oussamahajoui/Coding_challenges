@@ -11,7 +11,7 @@
 
 // Example:
 //   declare_winner(Fighter("Lew", 10, 2), Fighter("Harry", 5, 4), "Lew") => "Lew"
-  
+
 //   Lew attacks Harry; Harry now has 3 health.
 //   Harry attacks Lew; Lew now has 6 health.
 //   Lew attacks Harry; Harry now has 1 health.
@@ -25,3 +25,23 @@
 // }
 
 // My Solution:
+function declareWinner(fighter1, fighter2, firstAttacker) {
+    const f1 = Math.ceil(fighter1.health / fighter2.damagePerAttack)
+    const f2 = Math.ceil(fighter2.health / fighter1.damagePerAttack)
+    return f1 < f2 ? fighter2.name : f2 < f1 ? fighter1.name : firstAttacker
+}
+
+// Other way:
+function declareWinner(fighter1, fighter2, firstAttacker) {
+    while (fighter1.health > 0 && fighter2.health > 0) {
+        fighter2.health -= fighter1.damagePerAttack;
+        fighter1.health -= fighter2.damagePerAttack;
+    }
+
+    if (fighter1.health <= 0 && fighter2.health <= 0)
+        return firstAttacker;
+    else if (fighter1.health <= 0)
+        return fighter2.name;
+    else
+        return fighter1.name;
+}
