@@ -26,3 +26,17 @@
 // (185) is divisible by (37) , (185) is less than or equal to bound (200) , and (185) is > 0 .
 
 // My Solution:
+function maxMultiple(divisor, bound) {
+    let res = -1
+    for (let i = 0; i <= bound; i++) {
+        if (i % divisor === 0) {
+            res = Math.max(i, res)
+        }
+    }
+    return res
+}
+
+// Math way:
+function maxMultiple(divisor, bound) {
+    return bound - bound % divisor
+}
