@@ -8,3 +8,8 @@
 // Good luck!
 
 // My Solution:
+function capitalize(s) {
+    let evenOnes = s.split('').map((e, idx) => idx % 2 === 0 ? e.toUpperCase() : e).join('')
+    let oddOnes = s.split('').map((e, idx) => idx % 2 === 1 ? e.toUpperCase() : e).join('')
+    return [evenOnes, oddOnes]
+};
