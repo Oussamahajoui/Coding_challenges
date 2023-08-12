@@ -18,3 +18,6 @@
 // You can assume that all inputs are valid integers.
 
 // My Solution:
+function roundToNext5(n) {
+    return Math.ceil(n / 5) * 5
+}
