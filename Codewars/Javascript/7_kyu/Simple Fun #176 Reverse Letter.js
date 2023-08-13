@@ -14,3 +14,6 @@
 // [output] a string
 
 // My Solution:
+function reverseLetter(str) {
+    return str.split('').filter((e) => (e <= 'Z' && e >= 'A') || (e <= 'z' && e >= 'a')).reverse().join('')
+}
