@@ -14,3 +14,9 @@
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 // My Solution:
+function gimme(triplet) {
+    let biggest = Math.max(...triplet)
+    let smallest = Math.min(...triplet)
+    let middle = triplet.find(e => e !== biggest && e !== smallest)
+    return triplet.indexOf(middle)
+}
