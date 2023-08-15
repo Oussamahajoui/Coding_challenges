@@ -9,3 +9,6 @@
 // Let's assume that all numbers in the input will be integer values.
 
 // My Solution:
+function sumDigits(number) {
+    return number.toString().split('').filter((e) => 0 <= parseFloat(e) && 9 >= parseFloat(e)).reduce((a, b) => parseFloat(a) + parseFloat(b), 0)
+}
