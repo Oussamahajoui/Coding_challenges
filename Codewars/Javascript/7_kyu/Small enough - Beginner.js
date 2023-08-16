@@ -4,3 +4,10 @@
 // You can assume all values in the array are numbers.
 
 // My Solution:
+function smallEnough(a, limit) {
+    let b = a.filter((e) => e > limit)
+    return b.length > 0 ? false : true
+}
+
+// Other way:
+smallEnough = (a, l) => a.every(e => e <= l)
