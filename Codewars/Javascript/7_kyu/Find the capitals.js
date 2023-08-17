@@ -6,3 +6,12 @@
 // "CodEWaRs" --> [0,3,4,6]
 
 // My Solution:
+var capitals = function (word) {
+    let res = []
+    for (const c of word) {
+        if ('A' <= c && c <= 'Z') {
+            res.push(word.indexOf(c))
+        }
+    }
+    return res
+};
