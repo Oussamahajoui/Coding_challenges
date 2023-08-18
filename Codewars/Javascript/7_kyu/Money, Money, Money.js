@@ -26,3 +26,11 @@
 // Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
 
 // My Solution:
+function calculateYears(principal, interest, tax, desired) {
+    let res = 0
+    while (principal < desired) {
+        principal = principal + Number(((principal * interest) * (1 - tax)).toFixed(2))
+        res += 1
+    }
+    return res
+}
