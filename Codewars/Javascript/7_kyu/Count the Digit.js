@@ -19,3 +19,15 @@
 // Note that 121 has twice the digit 1.
 
 // My Solution:
+function nbDig(n, d) {
+    let res = 0
+    for (let i = 0; i <= n; i++) {
+        let tmparr = (i ** 2).toString().split('')
+        for (const c of tmparr) {
+            if (c == d) {
+                res += 1
+            }
+        }
+    }
+    return res
+}
