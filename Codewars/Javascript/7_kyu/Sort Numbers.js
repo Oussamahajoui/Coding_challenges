@@ -7,3 +7,6 @@
 // solution(null); // should return []
 
 // My Solution:
+function solution(nums) {
+    return !nums ? [] : nums.sort((a, b) => a - b)
+}
