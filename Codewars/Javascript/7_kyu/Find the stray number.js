@@ -10,3 +10,22 @@
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 
 // My Solution:
+function stray(numbers) {
+    let setMap = new Set()
+    for (const n of numbers) {
+        if (!setMap.has(n)) {
+            setMap.add(n)
+        } else {
+            setMap.delete(n)
+        }
+    }
+    let res = Array.from(setMap)
+    return res[0]
+}
+
+// Simpler way:
+function stray(numbers) {
+    for (var i in numbers) {
+        if (numbers.indexOf(numbers[i]) === numbers.lastIndexOf(numbers[i])) { return numbers[i] }
+    }
+}
