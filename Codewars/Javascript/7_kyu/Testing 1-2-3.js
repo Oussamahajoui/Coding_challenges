@@ -11,3 +11,6 @@
 // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
 // My Solution:
+var number = function (array) {
+    return array.map((e, idx) => `${idx + 1}: ${e}`)
+}
