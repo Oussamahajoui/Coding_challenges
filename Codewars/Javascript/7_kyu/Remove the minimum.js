@@ -15,3 +15,7 @@
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
 // My Solution:
+function removeSmallest(numbers) {
+    let res = numbers
+    return res.filter((e, idx) => idx != numbers.indexOf(Math.min(...numbers)))
+}
