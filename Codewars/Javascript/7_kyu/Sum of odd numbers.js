@@ -13,3 +13,6 @@
 // 2 --> 3 + 5 = 8
 
 // My Solution:
+function rowSumOddNumbers(n) {
+    return n ** 3
+}
