@@ -11,3 +11,6 @@
 // 114 --> -1  #  because 114 is not a perfect square
 
 // My Solution:
+function findNextSquare(sq) {
+    return Number.isInteger(Math.sqrt(sq)) ? (Math.sqrt(sq) + 1) ** 2 : -1
+}
