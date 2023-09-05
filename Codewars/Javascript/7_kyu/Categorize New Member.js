@@ -14,3 +14,16 @@
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 // My Solution:
+function openOrSenior(data) {
+    let res = []
+    for (let i = 0; i < data.length; i++) {
+        let age = data[i][0]
+        let handicap = data[i][1]
+        if (age >= 55 && handicap > 7) {
+            res.push('Senior')
+        } else {
+            res.push('Open')
+        }
+    }
+    return res
+}
