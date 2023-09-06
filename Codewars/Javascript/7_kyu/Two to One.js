@@ -10,3 +10,16 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 // My Solution:
+function longest(s1, s2) {
+    let allLetters = [...s1, ...s2].sort((a, b) => a.localeCompare(b))
+    let res = []
+    for (const c of allLetters) {
+        if (res.indexOf(c) === -1) {
+            res.push(c)
+        }
+    }
+    return res.join('')
+}
+
+// Better way:
+const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
