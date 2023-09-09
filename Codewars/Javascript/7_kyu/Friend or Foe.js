@@ -11,3 +11,6 @@
 // Input strings will only contain letters. Note: keep the original order of the names in the output.
 
 // My Solution:
+function friend(friends) {
+    return friends.filter((e) => e.length === 4)
+}
