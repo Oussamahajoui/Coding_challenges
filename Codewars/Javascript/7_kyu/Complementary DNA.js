@@ -13,3 +13,16 @@
 // "GTAT" --> "CATA"
 
 // My Solution:
+function dnaStrand(dna) {
+    const lookup = {
+        "A": "T",
+        "T": "A",
+        "C": "G",
+        "G": "C"
+    }
+    let res = []
+    for (const c of dna) {
+        res.push(lookup[c])
+    }
+    return res.join('')
+}
