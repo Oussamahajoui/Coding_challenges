@@ -7,3 +7,11 @@
 // solution('abc', 'd') // returns false
 
 // My Solution:
+function solution(str, ending) {
+    return str.slice(str.length - ending.length, str.length) === ending
+}
+
+// Better built-in way:
+function solution(str, ending) {
+    return str.endsWith(ending);
+}
