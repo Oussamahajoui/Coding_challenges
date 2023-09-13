@@ -8,3 +8,10 @@
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
 // My Solution:
+function accum(s) {
+    let res = []
+    for (let i = 0; i < s.length; i++) {
+        res.push(s[i].toUpperCase() + s[i].toLowerCase().repeat(i))
+    }
+    return res.join('-')
+}
