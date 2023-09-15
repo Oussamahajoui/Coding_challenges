@@ -10,3 +10,10 @@
 // XO("zzoo") => false
 
 // My Solution:
+function XO(str) {
+    const counterMap = { 'x': 0, 'o': 0 }
+    for (const item of str) {
+        counterMap[item.toLowerCase()] += 1
+    }
+    return counterMap['x'] === counterMap['o']
+}
