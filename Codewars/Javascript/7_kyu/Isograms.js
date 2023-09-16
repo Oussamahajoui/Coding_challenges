@@ -8,3 +8,22 @@
 // "moOse" --> false (ignore letter case)
 
 // My Solution:
+function isIsogram(str) {
+    const mySet = new Set();
+
+    for (let c of str) {
+        c = c.toLowerCase()
+        if (mySet.has(c)) {
+            return false
+        }
+        else {
+            mySet.add(c)
+        }
+    }
+    return true
+}
+
+// One line:
+function isIsogram(str) {
+    return new Set(str.toUpperCase()).size == str.length;
+}
