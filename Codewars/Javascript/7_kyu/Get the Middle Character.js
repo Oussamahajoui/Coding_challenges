@@ -19,3 +19,13 @@
 // The middle character(s) of the word represented as a string.
 
 // My Solution:
+function getMiddle(s) {
+    const N = s.length
+    if (N % 2 === 1) { // odd
+        let idx = Math.floor(N / 2)
+        return s[idx]
+    } else { // even case
+        let idx = N / 2
+        return s.slice(idx - 1, idx + 1)
+    }
+}
