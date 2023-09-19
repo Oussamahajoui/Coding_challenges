@@ -7,3 +7,6 @@
 // filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
 // My Solution:
+function filter_list(l) {
+    return l.filter((e) => typeof e === 'number')
+}
