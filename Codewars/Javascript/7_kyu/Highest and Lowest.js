@@ -11,3 +11,7 @@
 // Output string must be two numbers separated by a single space, and highest number is first.
 
 // My Solution:
+function highAndLow(numbers) {
+    let arr = numbers.split(' ').map((e) => parseFloat(e))
+    return `${Math.max(...arr)} ${Math.min(...arr)}`
+}
