@@ -10,3 +10,8 @@
 // Happy Coding!
 
 // My Solution:
+function squareDigits(num) {
+    num = num.toString().split('')
+    let res = num.map((e) => String(Number(e) ** 2)).join('')
+    return parseFloat(res)
+}
