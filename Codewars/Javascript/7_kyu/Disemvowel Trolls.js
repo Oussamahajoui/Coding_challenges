@@ -10,3 +10,8 @@
 // Note: for this kata y isn't considered a vowel.
 
 // My Solution:
+function disemvowel(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let res = str.split('').filter((e) => !vowels.includes(e.toLowerCase()))
+    return res.join('')
+}
