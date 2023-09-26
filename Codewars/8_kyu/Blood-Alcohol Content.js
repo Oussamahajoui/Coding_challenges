@@ -24,3 +24,9 @@
 // Using these parameters, create the function that will calculate Bob's and other partier's BAC.
 
 // My Solution:
+function bloodAlcoholContent(drinks, W, sex, time) {
+    const r = sex === 'male' ? 0.73 : 0.66
+    const A = drinks.ounces * drinks.abv
+    let bac = (A * 5.14 / W * r) - .015 * time
+    return parseFloat(bac.toFixed(4))
+}
