@@ -24,3 +24,10 @@
 // The two examples above seems to meet our requirements, but please note: a cube is unable to evenly divided into 50 pieces or 4 pieces. Only cubic numbers(such as 8,27,64,125,216...) can be used to divide the cube evenly.
 
 // My Solution:
+function isIntegerCube(n) {
+    return Number.isInteger(Math.cbrt(n))
+}
+
+function cutCube(volume, n) {
+    return isIntegerCube(n) && isIntegerCube(volume / n)
+}
