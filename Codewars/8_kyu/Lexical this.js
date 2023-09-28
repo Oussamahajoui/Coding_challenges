@@ -6,3 +6,11 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
 // My Solution:
+var Person = function () {
+    var person = {
+        _name: "Leroy",
+        _friends: [],
+        fillFriends(f) { this._friends.push(...f) }
+    }
+    return person;
+}
