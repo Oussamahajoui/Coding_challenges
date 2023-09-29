@@ -13,3 +13,6 @@
 // Good luck!
 
 // My Solution:
+const sumSquares = (array) => {
+    return array.map((e) => e ** 2).reduce((a, b) => a + b, 0)
+}
