@@ -6,4 +6,4 @@
 // a == !a
 
 // My Solution:
-
+const a = '0'
