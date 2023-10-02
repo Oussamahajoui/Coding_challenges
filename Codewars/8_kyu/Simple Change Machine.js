@@ -8,3 +8,13 @@
 // This change machine is programmed to accept and distribute strings rather than numbers. The input will be a string containing the coin or note to be processed, and the change should be returned as one string with the coin names separated by single spaces with no commas. The values of the string should be in descending order. For example, an input of "50p" should yield the exact string "20p 20p 10p".
 
 // My Solution:
+function changeMe(moneyIn) {
+    switch (true) {
+        case moneyIn === '£5': return `${'20p '.repeat(5 * 5).trimRight()}`
+        case moneyIn === '£2': return `${'20p '.repeat(5 * 2).trimRight()}`
+        case moneyIn === '£1': return `${'20p '.repeat(5 * 1).trimRight()}`
+        case moneyIn === '50p': return `${'20p '.repeat(2).trimRight()} 10p`
+        case moneyIn === '20p': return `${'10p '.repeat(2).trimRight()}`
+        default: return moneyIn
+    }
+}
