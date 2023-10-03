@@ -11,3 +11,7 @@
 // This is a modification on the Kata: Array2Binary addition hope you like it
 
 // My Solution:
+function arr2bin(arr) {
+    let res = arr.filter((a) => typeof a === 'number').reduce((a, b) => a + b, 0).toString(2)
+    return res
+}
