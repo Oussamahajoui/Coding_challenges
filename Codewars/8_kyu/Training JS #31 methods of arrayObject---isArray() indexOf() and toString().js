@@ -17,3 +17,8 @@
 // Using string template and ternary operator can make your work easier.
 
 // My Solution:
+function blackAndWhite(arr) {
+    return !Array.isArray(arr) ? "It's a fake array" :
+        arr.indexOf(5) === -1 || arr.indexOf(13) === -1 ? "It's a white array" :
+            "It's a black array"
+}
