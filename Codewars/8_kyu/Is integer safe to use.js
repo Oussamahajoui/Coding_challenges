@@ -6,3 +6,11 @@
 // SafeInteger(9007199254740992) //false
 
 // My Solution:
+function SafeInteger(n) {
+    return n < Number.MAX_SAFE_INTEGER && n > Number.MIN_SAFE_INTEGER
+}
+
+// Other way:
+function SafeInteger(n) {
+    return Number.isSafeInteger(n);
+}
