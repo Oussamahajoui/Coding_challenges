@@ -23,3 +23,6 @@
 // Tests round answers to 6 decimal places.
 
 // My Solution:
+function circleArea(circle) {
+    return Number((Math.PI * (circle.radius ** 2)).toFixed(6))
+}
