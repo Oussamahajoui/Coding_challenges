@@ -10,3 +10,6 @@
 // Great coding <3
 
 // My Solution:
+function power(x, y) {
+    return x ** y
+}
