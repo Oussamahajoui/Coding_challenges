@@ -6,3 +6,7 @@
 // Any solution is acceptable!
 
 // My Solution:
+const isReallyNaN = (val) => Number.isNaN(val);
+
+// Other Solution:
+const isReallyNaN = Number.isNaN
