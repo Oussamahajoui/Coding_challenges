@@ -12,3 +12,19 @@
 // roundIt(34.56) should return 35
 
 // My Solution:
+function roundIt(n) {
+    let decimalsVsIntegers = String(n).split('.')
+    if (decimalsVsIntegers[0].length > decimalsVsIntegers[1].length) {
+        return Math.floor(n)
+    } else if (decimalsVsIntegers[1].length > decimalsVsIntegers[0].length) {
+        return Math.ceil(n)
+    } else {
+        return Math.round(n)
+    }
+}
+
+// More concise way:
+function roundIt(n) {
+    var [a, b] = n.toString().split('.');
+    return a.length > b.length ? Math.floor(n) : a.length === b.length ? Math.round(n) : Math.ceil(n);
+}
