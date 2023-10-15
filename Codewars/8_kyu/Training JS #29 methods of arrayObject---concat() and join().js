@@ -16,3 +16,6 @@
 // bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"
 
 // My Solution:
+function bigToSmall(arr) {
+    return arr.flat().sort((a, b) => b - a).map((e) => String(e)).join('>')
+}
