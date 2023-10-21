@@ -8,3 +8,11 @@
 // P.S. You have to create a new list and add a new item to that. (This Kata is originally designed for C# language and it shows that adding a new item to the input list is not going to work, even though the parameter is passed by value, but the value is poining to the reference of list and any change on parameter will be seen by caller)
 
 // My Solution:
+function addExtra(listOfNumbers) {
+    let res = []
+    for (let i = 0; i < listOfNumbers.length; i++) {
+        res.push(listOfNumbers[i])
+    }
+    res.push('SIIIIIIIIIIIUUUUUUUUUU')
+    return res
+}
