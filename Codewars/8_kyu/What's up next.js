@@ -7,3 +7,25 @@
 // nextItem("testing", "t") # "e"
 
 // My Solution:
+function nextItem(xs, item) {
+    let found = false;
+    let finalValue;
+    for (const i of xs) {
+        if (found) {
+            finalValue = i;
+            break;
+        }
+        if (i === item) found = true;
+    }
+    return finalValue;
+}
+
+// Other solution:
+function nextItem(xs, item) {
+    let found = false;
+    for (const x of xs) {
+        if (found) return x;
+        if (x == item) found = true;
+    }
+    return undefined;
+}
