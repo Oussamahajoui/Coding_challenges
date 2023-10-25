@@ -11,3 +11,6 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
 // My Solution:
+function anyArrows(arrows) {
+    return arrows.some(e => !e.damaged);
+}
