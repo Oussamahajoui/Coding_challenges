@@ -12,3 +12,6 @@
 // firstToLast("ababc","d") should return -1
 
 // My Solution:
+function firstToLast(str, c) {
+    return str.indexOf(c) != -1 ? str.lastIndexOf(c) - str.indexOf(c) : -1
+}
