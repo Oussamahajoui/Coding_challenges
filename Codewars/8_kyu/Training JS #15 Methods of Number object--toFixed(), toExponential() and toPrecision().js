@@ -12,3 +12,10 @@
 // howManySmaller([3.1288,3.1212,3.1205],3.1212) should return 2
 
 // My Solution:
+
+function howManySmaller(arr, n) {
+    arr = arr.map((a) => Number(a.toFixed(2)))
+    let res = 0
+    arr.forEach((e) => { if (e < n) { res += 1 } })
+    return res
+}
