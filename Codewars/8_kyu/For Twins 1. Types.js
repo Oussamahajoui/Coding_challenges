@@ -10,3 +10,6 @@
 // "42", "number" --> false
 
 // My Solution:
+function typeValidation(variable, type) {
+    return typeof variable === type
+}
