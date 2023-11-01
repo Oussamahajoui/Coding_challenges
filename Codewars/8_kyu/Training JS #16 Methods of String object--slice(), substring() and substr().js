@@ -12,3 +12,11 @@
 // cutIt(["codewars","javascript","java"]) should return ["code","java","java"]
 
 // My Solution:
+function cutIt(arr) {
+    let shortest = Number.POSITIVE_INFINITY
+    for (i = 0; i < arr.length; i++) {
+        shortest = Math.min(shortest, arr[i].length)
+    }
+    let res = arr.map((e) => e.substr(0, shortest))
+    return res
+}
