@@ -7,3 +7,12 @@
 // Of course, the existing Array.prototype.filter() function has been undefined for the purposes of this Kata.
 
 // My Solution:
+Array.prototype.filter = function (func) {
+    let res = []
+    for (let i = 0; i < this.length; i++) {
+        if (func(this[i])) {
+            res.push(this[i]);
+        }
+    }
+    return res
+}
