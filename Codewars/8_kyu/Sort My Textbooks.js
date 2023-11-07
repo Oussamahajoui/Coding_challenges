@@ -4,3 +4,11 @@
 // The sorting should NOT be case sensitive
 
 // My Solution:
+let sorter = (textbooks) => textbooks.sort((a, b) => {
+    const aa = a.toLowerCase()
+    const bb = b.toLowerCase()
+
+    if (aa > bb) return 1
+    if (aa < bb) return -1
+    return 0
+});
