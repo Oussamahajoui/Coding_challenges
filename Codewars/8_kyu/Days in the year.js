@@ -15,3 +15,11 @@
 // So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
 
 // My Solution:
+function yearDays(year) {
+    if ((year % 4) || (year % 100 === 0 && year % 400)) {
+        return `${year} has 365 days`
+    }
+    else {
+        return `${year} has 366 days`
+    }
+}
