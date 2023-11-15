@@ -22,3 +22,16 @@
 // A Boolean value (True or False).
 
 // My Solution:
+function logicalCalc(array, op) {
+    let res = array[0]
+    for (let i = 1; i < array.length; i++) {
+        if (op === 'AND') {
+            res = res && array[i]
+        } else if (op === 'OR') {
+            res = res || array[i]
+        } else {
+            res = res !== array[i]
+        }
+    }
+    return res
+}
