@@ -19,3 +19,25 @@
 // "Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
 
 // My Solution:
+function correctPolishLetters(string) {
+    const polishDict = {
+        'ą': 'a',
+        'ć': 'c',
+        'ę': 'e',
+        'ł': 'l',
+        'ń': 'n',
+        'ó': 'o',
+        'ś': 's',
+        'ź': 'z',
+        'ż': 'z'
+    }
+    let res = []
+    for (const c of string) {
+        if (c in polishDict) {
+            res.push(polishDict[c])
+        } else {
+            res.push(c)
+        }
+    }
+    return res.join('')
+}
