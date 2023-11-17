@@ -19,3 +19,12 @@
 // Happy hacking!
 
 // My Solution:
+function aliasGen(first, last) {
+    if (first[0].toUpperCase() >= 'A' && first[0].toUpperCase() <= 'Z' &&
+        last[0].toUpperCase() >= 'A' && last[0].toUpperCase() <= 'Z') {
+        return `${firstName[first[0].toUpperCase()]} ${surname[last[0].toUpperCase()]}`
+    }
+    else {
+        return "Your name must start with a letter from A - Z."
+    }
+}
