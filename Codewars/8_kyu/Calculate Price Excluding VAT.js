@@ -13,3 +13,10 @@
 // If null value given then return -1
 
 // My Solution:
+//return price without vat
+function excludingVatPrice(price) {
+    if (price === null) {
+        return -1
+    }
+    return parseFloat((price / (1.15)).toFixed(2))
+}
