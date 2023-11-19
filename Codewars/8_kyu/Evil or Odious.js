@@ -10,3 +10,15 @@
 // good luck :)
 
 // My Solution:
+function evil(n) {
+    n = n.toString(2)
+    n = n.split('')
+    let nbOfOnes = 0
+    for (const c of n) {
+        console.log(c)
+        if (c == '1') {
+            nbOfOnes += 1
+        }
+    }
+    return nbOfOnes % 2 === 1 ? "It's Odious!" : "It's Evil!"
+}
