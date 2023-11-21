@@ -10,3 +10,14 @@
 // []  =>  []
 
 // My Solution:
+function twoHighest(arr) {
+    arr.sort((a, b) => b - a)
+    let resSet = new Set(arr)
+    let resArray = Array.from(resSet)
+    return resArray.slice(0, 2)
+}
+
+// In one line:
+function twoHighest(arr) {
+    return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2)
+}
