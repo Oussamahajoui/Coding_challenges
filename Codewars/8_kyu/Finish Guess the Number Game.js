@@ -7,3 +7,23 @@
 // Can you finish the game so all the rules are met?
 
 // My Solution:
+class Guesser {
+    constructor(number, lives) {
+        this.number = number;
+        this.lives = lives;
+    }
+
+    guess(n) {
+        if (this.lives <= 0) {
+            throw Error
+        }
+        if (n === this.number) {
+            return true
+        }
+        else if (n !== this.number) {
+            this.lives -= 1
+            return false
+        }
+
+    }
+}
