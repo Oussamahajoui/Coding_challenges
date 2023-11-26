@@ -8,3 +8,12 @@
 // In this kata, the function will take a string as its argument, and return a string with every word replaced by the explanation to everything, according to Freud. Note that an empty string, or no arguments, should return an empty string.
 
 // My Solution:
+function toFreud(string) {
+    if (!string) {
+        return ''
+    }
+    return string.split(' ').map(() => 'sex').join(' ')
+}
+
+// Using ternary :
+const toFreud = str => str === '' ? '' : str.split(' ').map(e => 'sex').join(' ')
