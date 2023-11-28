@@ -9,3 +9,27 @@
 // 1 Dollar = 100 Cents
 
 // My Solution:
+function fuelPrice(litres, pricePerLitre) {
+    let discount = 0;
+
+    if (litres >= 10) {
+        discount = 25;
+    } else if (litres >= 8) {
+        discount = 20;
+    } else if (litres >= 6) {
+        discount = 15;
+    } else if (litres >= 4) {
+        discount = 10;
+    } else if (litres >= 2) {
+        discount = 5;
+    }
+
+    // Apply the discount to the price per litre
+    let finalPricePerLitre = pricePerLitre - (discount / 100);
+
+    // Calculate the total cost
+    let totalCost = litres * finalPricePerLitre;
+
+    // Return the total cost rounded to two decimal places
+    return Number(totalCost.toFixed(2));
+}
