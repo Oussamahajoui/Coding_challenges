@@ -11,3 +11,8 @@
 // Assume that [a,b,c,d] and the answer are all integers (no floating numbers!). Slope: https://en.wikipedia.org/wiki/Slope
 
 // My Solution:
+function slope(points) {
+    const [x1, y1, x2, y2] = points
+    const res = (y2 - y1) / (x2 - x1)
+    return isFinite(res) ? `${res}` : 'undefined'
+}
