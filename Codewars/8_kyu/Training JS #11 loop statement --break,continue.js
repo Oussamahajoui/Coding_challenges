@@ -12,3 +12,19 @@
 // If you forgot how to push an element to array, please refer to lesson 4.
 
 // My Solution:
+function grabDoll(dolls) {
+    let bag = [];
+    for (const d of dolls) {
+        if (bag.length >= 3) {
+            break
+        }
+        else if (d === 'Hello Kitty' || d === 'Barbie doll') {
+            bag.push(d)
+        }
+        else {
+            continue
+        }
+    }
+
+    return bag;
+}
