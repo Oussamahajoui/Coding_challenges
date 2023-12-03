@@ -7,3 +7,9 @@
 // "No?" --> "No?"
 
 // My Solution:
+function ensureQuestion(s) {
+    return s[s.length - 1] === '?' ? s : s + '?'
+}
+
+// Another way:
+const ensureQuestion = s => s.endsWith('?') ? s : s + '?'
