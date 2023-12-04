@@ -11,3 +11,6 @@
 // splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"
 
 // My Solution:
+function splitAndMerge(string, separator) {
+    return string.split(' ').map((e) => e.split('').join(separator)).join(' ')
+}
