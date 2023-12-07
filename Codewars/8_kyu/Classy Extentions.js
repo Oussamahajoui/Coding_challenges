@@ -8,3 +8,8 @@
 // Reference: JS, Ruby, Python.
 
 // My Solution:
+class Cat extends Animal {
+    speak() {
+        return `${this.name} meows.`
+    }
+}
