@@ -14,3 +14,16 @@
 // http://www.rubycuts.com/enum-all
 
 // My Solution:
+function all(arr, fun) {
+    for (let c of arr) {
+        if (!fun(c)) {
+            return false
+        }
+    }
+    return true
+}
+
+// Other solution:
+function all(arr, fun) {
+    return arr.every(fun)
+}
