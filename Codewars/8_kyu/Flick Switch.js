@@ -14,3 +14,14 @@
 // Switch the boolean value on the same element as the flick itself.
 
 // My Solution:
+function flickSwitch(arr) {
+    let flick = true
+    let res = []
+    arr.map((e) => {
+        if (e === 'flick') {
+            flick = !flick
+        }
+        res.push(flick)
+    })
+    return res
+}
