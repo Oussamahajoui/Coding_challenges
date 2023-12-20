@@ -6,3 +6,7 @@
 // getNumberFromString(s)
 
 // My Solution:
+function getNumberFromString(s) {
+    const arr = s.split('').filter((e) => e >= '0' && e <= '9')
+    return Number(arr.join(''))
+}
