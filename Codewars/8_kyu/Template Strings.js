@@ -10,3 +10,6 @@
 // Reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/template_strings
 
 // My Solution:
+var templateStrings = function (noun, adjective) {
+    return `${noun} are ${adjective}`
+}
