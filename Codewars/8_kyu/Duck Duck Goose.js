@@ -14,3 +14,8 @@
 // duck_duck_goose([$a, $b, $c, $d], 4); // => $d["name"]
 
 // My Solution:
+function duckDuckGoose(players, goose) {
+    goose -= 1
+    let idx = goose % players.length
+    return players[idx].name
+}
