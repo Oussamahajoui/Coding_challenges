@@ -19,3 +19,7 @@
 // function should be case insensitive to pass the tests
 
 // My Solution:
+function validateHello(greetings) {
+    let res = /(hello|ciao|salut|hallo|hola|ahoj|czesc)/i.test(greetings)
+    return res
+}
