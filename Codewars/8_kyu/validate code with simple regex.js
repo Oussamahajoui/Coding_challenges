@@ -4,3 +4,8 @@
 // You can assume the input will always be a number.
 
 // My Solution:
+function validateCode(code) {
+    return String(code).startsWith('1') ||
+        String(code).startsWith('2') ||
+        String(code).startsWith('3')
+}
