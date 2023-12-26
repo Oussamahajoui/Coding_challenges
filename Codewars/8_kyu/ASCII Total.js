@@ -7,3 +7,9 @@
 // uniTotal("aaa") == 291
 
 // My Solution:
+function uniTotal(string) {
+    const arr = string.split('')
+    let res = 0
+    arr.forEach((e) => res += e.charCodeAt())
+    return res
+}
