@@ -17,3 +17,8 @@
 // 90, 2  -->  "30x^3"
 
 // My Solution:
+function integrate(coefficient, exponent) {
+    let nwexponent = exponent + 1
+    let nwcoef = coefficient / nwexponent
+    return `${nwcoef}x^${nwexponent}`
+}
