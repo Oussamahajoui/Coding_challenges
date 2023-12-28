@@ -12,3 +12,8 @@
 // guessBlue() should return the probability of drawing a blue marble, expressed as a float. For example, guessBlue(5, 5, 2, 3) should return 0.6.
 
 // My Solution:
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+    let blue = blueStart - bluePulled
+    let red = redStart - redPulled
+    return blue / (blue + red)
+}
