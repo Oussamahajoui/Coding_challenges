@@ -11,3 +11,6 @@
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
 // My Solution:
+var ArrowFunc = function (arr) {
+    return arr.map(e => String.fromCharCode(e)).join('')
+}
