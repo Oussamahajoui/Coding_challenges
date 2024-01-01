@@ -26,3 +26,15 @@
 // Collatz conjecture wikipedia page: https://en.wikipedia.org/wiki/Collatz_conjecture
 
 // My Solution:
+var hotpo = function (n) {
+    let res = 0
+    while (n != 1) {
+        if (n % 2) {
+            n = 3 * n + 1
+        } else {
+            n = n / 2
+        }
+        res += 1
+    }
+    return res
+}
