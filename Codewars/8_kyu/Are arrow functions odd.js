@@ -5,3 +5,6 @@
 // [2, 4, 6]        -->  []
 
 // My Solution:
+function odds(values) {
+    return values.filter(e => e % 2 === 1);
+}
