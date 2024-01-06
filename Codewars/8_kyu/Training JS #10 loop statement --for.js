@@ -6,3 +6,10 @@
 // If you forgot how to push an element to an array, please refer to lesson 4.
 
 // My Solution:
+function pickIt(arr) {
+    var odd = [], even = [];
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] % 2 === 0 ? even.push(arr[i]) : odd.push(arr[i])
+    }
+    return [odd, even];
+}
