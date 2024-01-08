@@ -10,3 +10,20 @@
 // Go on and code some pure awesomeness!
 
 // My Solution:
+function nextId(ids) {
+    console.log(ids)
+    const b = Math.max(...ids)
+    for (let i = 0; i <= b; i++) {
+        if (!ids.includes(i)) {
+            return i
+        }
+    }
+    return b + 1
+}
+
+// Other Solution:
+function nextId(ids) {
+    var x = 0;
+    while (ids.includes(x)) x++;
+    return x;
+}
