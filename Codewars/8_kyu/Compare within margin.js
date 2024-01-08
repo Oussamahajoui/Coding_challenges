@@ -28,3 +28,9 @@
 // This is because the distance between a and b is greater than 0, and a is less than b.
 
 // My Solution:
+function closeCompare(a, b, margin) {
+    if (!margin) {
+        margin = 0
+    }
+    return margin >= Math.abs(a - b) ? 0 : a < b ? -1 : 1
+}
