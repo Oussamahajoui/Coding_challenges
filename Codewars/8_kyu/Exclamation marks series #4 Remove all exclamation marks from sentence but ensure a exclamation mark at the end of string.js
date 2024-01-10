@@ -10,3 +10,14 @@
 // "Hi"      ---> "Hi!"
 
 // My Solution:
+function remove(string) {
+    const s = string.split('')
+    let res = []
+    for (let c of s) {
+        if (c !== "!") {
+            res.push(c)
+        }
+    }
+    res.push('!')
+    return res.join('')
+}
