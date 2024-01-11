@@ -4,3 +4,9 @@
 // For the ASCII table you can refer to http://www.asciitable.com/
 
 // My Solution:
+function getASCII(c) {
+    return c.charCodeAt(0)
+}
+
+// Other solution:
+getASCII = s => s.charCodeAt();
