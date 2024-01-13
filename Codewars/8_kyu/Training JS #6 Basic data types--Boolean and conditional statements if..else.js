@@ -6,3 +6,16 @@
 // In the end, click "Submit" to submit your code pass this kata.
 
 // My Solution:
+function trueOrFalse(val) {
+    if (val == false || val == undefined) {
+        return 'false'
+    }
+    else {
+        return 'true'
+    }
+}
+
+// Other solution:
+function trueOrFalse(val) {
+    return !val ? 'false' : 'true'
+}
