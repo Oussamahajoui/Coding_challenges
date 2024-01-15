@@ -14,3 +14,6 @@
 // isDigit("zero")
 
 // My Solution:
+function isDigit(s) {
+    return s == parseFloat(s);
+}
