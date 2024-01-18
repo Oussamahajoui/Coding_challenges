@@ -20,3 +20,9 @@
 // Other languages: return 1 or 0 or refer to Sample Tests.
 
 // My Solution:
+function isPythagoreanTriple(integers) {
+    let [a, b, c] = integers
+    return a ** 2 === (b ** 2 + c ** 2) ||
+        b ** 2 === (a ** 2 + c ** 2) ||
+        c ** 2 === (a ** 2 + b ** 2)
+}
