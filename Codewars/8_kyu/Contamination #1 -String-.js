@@ -14,3 +14,18 @@
 // text after  = "zzz"
 
 // My Solution:
+function contamination(text, char) {
+    if (!text) {
+        return ''
+    }
+    let res = ''
+    for (const c of text) {
+        res += char
+    }
+    return res
+}
+
+// Other Solution:
+function contamination(text, char) {
+    return char.repeat(text.length)
+}
