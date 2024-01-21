@@ -15,3 +15,12 @@
 // When you have finished, click "Test" to test your code against initial tests and "Attempt" to test your code against all tests. If you pass in all tests you can click "Submit" to submit your code.
 
 // My Solution:
+function howManydays(month) {
+    let thirtyOneGang = [1, 3, 5, 7, 8, 10, 12]
+    let thirtyGang = [4, 6, 9, 11]
+    switch (true) {
+        case thirtyOneGang.includes(month): return 31
+        case thirtyGang.includes(month): return 30
+        case month === 2: return 28
+    }
+}
