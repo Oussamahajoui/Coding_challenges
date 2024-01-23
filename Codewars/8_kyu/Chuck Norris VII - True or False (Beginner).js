@@ -7,3 +7,6 @@
 // Go show some truth who's boss!
 
 // My Solution:
+function ifChuckSaysSo() {
+    return 1 === 2
+}
