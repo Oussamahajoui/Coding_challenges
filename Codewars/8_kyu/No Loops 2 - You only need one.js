@@ -6,3 +6,6 @@
 // Array can contain numbers or strings. x can be either. Return true if the array contains the value, false if not. With strings you will need to account for case.
 
 // My Solution:
+function check(a, x) {
+    return a.includes(x)
+}
