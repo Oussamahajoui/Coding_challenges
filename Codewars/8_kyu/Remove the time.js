@@ -13,3 +13,6 @@
 // Output will be the shortened string, e.g., "Friday May 2".
 
 // My Solution:
+function shortenToDate(longDate) {
+    return longDate.split(',')[0]
+}
