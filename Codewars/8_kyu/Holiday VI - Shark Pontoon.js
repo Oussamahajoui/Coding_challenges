@@ -22,3 +22,13 @@
 // If you make it, return "Alive!", if not, return "Shark Bait!".
 
 // My Solution:
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
+    if (dolphin) {
+        sharkSpeed /= 2
+    }
+    if (pontoonDistance / youSpeed < sharkDistance / sharkSpeed) {
+        return "Alive!"
+    } else {
+        return "Shark Bait!"
+    }
+}
