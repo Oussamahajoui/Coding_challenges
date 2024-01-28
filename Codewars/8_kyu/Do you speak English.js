@@ -8,3 +8,6 @@
 // Return value as boolean values, true for the string to contains "English", false for it does not.
 
 // My Solution:
+function spEng(sentence) {
+    return sentence.toLowerCase().includes('english')
+}
