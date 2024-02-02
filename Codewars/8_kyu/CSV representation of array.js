@@ -8,7 +8,7 @@
 //     [ 10,11,12,13,14 ],
 //     [ 20,21,22,23,24 ],
 //     [ 30,31,32,33,34 ]] 
-    
+
 // output:
 //      '0,1,2,3,4\n'
 //     +'10,11,12,13,14\n'
@@ -21,3 +21,9 @@
 // Note: you shouldn't escape the \n, it should work as a new line.
 
 // My Solution:
+function toCsvText(array) {
+    return array.join('\n')
+}
+
+// Other solution:
+const toCsvText = array => array.map(row => row.join(',')).join('\n');
