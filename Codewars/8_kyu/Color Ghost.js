@@ -10,3 +10,9 @@
 // ghost.color //=> "white" or "yellow" or "purple" or "red"
 
 // My Solution:
+class Ghost {
+    constructor() {
+        let colors = ['white', 'yellow', 'purple', 'red']
+        this.color = colors[Math.floor(Math.random() * colors.length)]
+    }
+}
