@@ -16,3 +16,12 @@
 // Your function should return the 20 year estimate of the stairs climbed using the formula above.
 
 // My Solution:
+function stairsIn20(s) {
+    let flattned_arr = [].concat(...s)
+    console.log(flattned_arr)
+    return flattned_arr.reduce((a, b) => a + b, 0) * 20
+}
+
+
+// Other solution:
+const stairsIn20 = s => s.flat().reduce((p, c) => p + c, 0) * 20
