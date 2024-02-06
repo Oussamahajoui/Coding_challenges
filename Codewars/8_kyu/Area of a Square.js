@@ -4,3 +4,6 @@
 // Note: use the π value provided in your language (Math::PI, M_PI, math.pi, etc)
 
 // My Solution:
+function squareArea(A) {
+    return Number(Math.pow((A * 4) / (Math.PI * 2), 2).toFixed(2))
+}
