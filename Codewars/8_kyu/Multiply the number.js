@@ -8,3 +8,7 @@
 //  -3 -->   -15  ( -3 * 5¹)
 
 // My Solution:
+function multiply(number) {
+    return number >= 0 ? number * (5 ** String(number).length) :
+        number * (5 ** (String(number).length - 1))
+}
