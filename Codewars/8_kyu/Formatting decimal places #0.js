@@ -6,3 +6,6 @@
 // 3.3424 is rounded 3.34
 
 // My Solution:
+function twoDecimalPlaces(n) {
+    return Number(n.toFixed(2))
+}
