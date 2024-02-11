@@ -15,3 +15,12 @@
 // "abcdefghijklmnopqrstuvwxyz" ===> 26
 
 // My Solution:
+function lowercaseCount(str) {
+    let res = 0
+    for (const c of str) {
+        if (c >= 'a' && c <= 'z') {
+            res += 1
+        }
+    }
+    return res
+}
