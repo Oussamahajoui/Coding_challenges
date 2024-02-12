@@ -10,3 +10,6 @@
 // 'James Stevens'
 
 // My Solution:
+function combineNames(first, last) {
+    return first + ' ' + last
+}
