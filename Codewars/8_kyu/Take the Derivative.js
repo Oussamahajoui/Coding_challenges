@@ -16,3 +16,6 @@
 // The exponent will never be 1, and neither number will ever be 0
 
 // My Solution:
+function derive(coefficient, exponent) {
+    return `${coefficient * exponent}x^${exponent - 1}`
+}
