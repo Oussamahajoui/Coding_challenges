@@ -12,3 +12,10 @@
 // sumMul(4, -7)  ==> "INVALID"
 
 // My Solution:
+function sumMul(n, m) {
+    let res = 0
+    for (let i = 1; n * i < m; i++) {
+        res += n * i
+    }
+    return n >= m ? 'INVALID' : res
+}
