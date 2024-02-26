@@ -4,3 +4,9 @@
 // Can you figure out what's wrong here?
 
 // My Solution:
+function swapValues(arr) {
+    let temp = arr[1];
+    arr[1] = arr[0]
+    arr[0] = temp
+    return arr
+}
