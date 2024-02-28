@@ -16,3 +16,24 @@
 // '0' and '?' returns -1
 
 // My Solution:
+function isUpper(x) {
+    return x.toUpperCase() === x
+}
+
+function isLower(x) {
+    return x.toLowerCase() === x
+}
+
+function sameCase(a, b) {
+    if (typeof a !== 'string' || typeof b !== 'string') {
+        return -1
+    }
+    else if (a.length !== 1 || b.length !== 1 || !((a >= 'A' && a <= 'Z') || (a >= 'a' && a <= 'z')) || !((b >= 'A' && b <= 'Z') || (b >= 'a' && b <= 'z'))) {
+        return -1;
+    }
+    else if ((isUpper(a) && isUpper(b)) || (isLower(a) && (isLower(b)))) {
+        return 1
+    } else {
+        return 0
+    }
+}
