@@ -17,3 +17,14 @@
 // "1,2"  =>  NULL
 
 // My Solution:
+function array(string) {
+    if (string.split(',').length < 3) {
+        return null
+    }
+    return string.split(',').slice(1, string.split(',').length - 1).join(' ')
+}
+
+// Other Solution:
+function array(arr) {
+    return arr.split(",").slice(1, -1).join(" ") || null;
+}
