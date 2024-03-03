@@ -10,3 +10,6 @@
 // Happy coding!
 
 // My Solution:
+function reverse(string) {
+    return string.split(' ').reverse().join(' ')
+}
