@@ -10,3 +10,12 @@
 // If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell, None in Rust).
 
 // My Solution:
+function sumOfDifferences(arr) {
+    arr.sort((a, b) => b - a)
+    let res = 0
+    for (let i = 0; i + 1 < arr.length; i++) {
+        let diff = arr[i] - arr[i + 1]
+        res += diff
+    }
+    return res
+}
