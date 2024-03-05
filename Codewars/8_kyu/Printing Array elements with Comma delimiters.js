@@ -12,3 +12,6 @@
 // Note2: the input data can be: boolean array, array of objects, array of string arrays, array of number arrays... 😕
 
 // My Solution:
+function printArray(array) {
+    return array.join(',')
+}
