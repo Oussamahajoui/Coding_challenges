@@ -16,3 +16,6 @@
 // 3. The mean (or average) of this list is 4
 
 // My Solution:
+var findAverage = function (nums) {
+    return nums.reduce((a, b) => a + b, 0) / nums.length
+}
