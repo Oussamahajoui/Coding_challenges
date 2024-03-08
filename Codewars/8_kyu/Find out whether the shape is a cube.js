@@ -14,3 +14,6 @@
 // Note: side will be an integer
 
 // My Solution:
+function cubeChecker(volume, side) {
+    return volume <= 0 || side <= 0 ? false : volume === side ** 3;
+};
