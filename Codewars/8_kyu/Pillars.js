@@ -7,3 +7,6 @@
 // Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
 
 // My Solution:
+function pillars(numPill, dist, width) {
+    return Math.max(0, (numPill - 2) * width + (numPill - 1) * (dist * 100))
+}
