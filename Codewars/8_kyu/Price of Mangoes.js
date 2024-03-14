@@ -8,3 +8,14 @@
 // mango(9, 5) ==> 30   # 6 mangoes for $5 per unit = $30; +3 mangoes for free
 
 // My Solution:
+function mango(quantity, price) {
+    if (quantity <= 3) {
+        return Math.min(2, quantity) * price
+    }
+    return (quantity - Math.floor(quantity / 3)) * price
+}
+
+// Other Solution:
+function mango(quantity, price) {
+    return price * (quantity - Math.floor(quantity / 3));
+}
