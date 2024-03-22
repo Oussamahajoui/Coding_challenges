@@ -11,3 +11,11 @@
 //   or `name` = ""        => return "Hello, World!"
 
 // My Solution:
+function hello(name) {
+    if (typeof name !== 'string' || name.trim() === '') {
+        return 'Hello, World!'
+    } else {
+        let formattedName = name.trim().toLowerCase()
+        return `Hello, ${formattedName.charAt(0).toUpperCase() + formattedName.slice(1)}!`
+    }
+}
