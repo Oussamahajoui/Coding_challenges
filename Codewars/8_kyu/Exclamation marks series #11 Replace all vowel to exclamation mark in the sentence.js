@@ -9,3 +9,15 @@
 // replace("ABCDE") === "!BCD!"
 
 // My Solution:
+function replace(s) {
+    vowels = 'aeiouAEIOU'
+    let res = []
+    for (let c of s) {
+        if (vowels.split('').includes(c)) {
+            res.push('!')
+        } else {
+            res.push(c)
+        }
+    }
+    return res.join('')
+}
