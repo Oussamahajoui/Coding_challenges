@@ -10,3 +10,10 @@
 // Note: String will have at least one element; words will always be separated by a space.
 
 // My Solution:
+function addLength(str) {
+    let res = []
+    for (let c of str.split(' ')) {
+        res.push(c + ' ' + c.length)
+    }
+    return res
+}
