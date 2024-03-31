@@ -10,3 +10,11 @@
 // [1, 2, 1, 1, 3, 2] -> [1, 2, 3]
 
 // My Solution:
+function distinct(a) {
+    return Array.from(new Set(a));
+}
+
+// Other solution:
+function distinct(a) {
+    return [...new Set(a)];
+}
