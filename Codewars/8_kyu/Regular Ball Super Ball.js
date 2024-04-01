@@ -10,3 +10,8 @@
 // ball2.ballType     //=> "super"
 
 // My Solution:
+class Ball {
+    constructor(ballType = 'regular') {
+        this.ballType = ballType
+    }
+}
