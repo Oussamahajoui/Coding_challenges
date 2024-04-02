@@ -18,3 +18,14 @@
 
 
 // My Solution:
+function warnTheSheep(queue) {
+    queue.reverse()
+    if (queue[0] === 'wolf') {
+        return "Pls go away and stop eating my sheep"
+    }
+    else {
+        const idx = queue.indexOf('wolf')
+        return `Oi! Sheep number ${idx}! You are about to be eaten by a wolf!`
+
+    }
+}
