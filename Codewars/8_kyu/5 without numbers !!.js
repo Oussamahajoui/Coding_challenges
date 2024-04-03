@@ -6,3 +6,7 @@
 // Good luck :)
 
 // My Solution:
+function unusualFive() {
+    const x = "Five!"
+    return x.length
+}
