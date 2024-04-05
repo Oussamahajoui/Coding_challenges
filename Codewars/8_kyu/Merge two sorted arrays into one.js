@@ -14,3 +14,9 @@
 // Happy coding!
 
 // My Solution:
+function mergeArrays(arr1, arr2) {
+    let res = [...arr1, ...arr2]
+    res = Array.from(new Set(res));
+    res.sort((a, b) => a - b)
+    return res
+}
