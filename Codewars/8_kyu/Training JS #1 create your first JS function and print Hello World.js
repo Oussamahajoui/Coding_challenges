@@ -18,3 +18,7 @@
 // In the end, click "Submit" to submit your code pass this kata.
 
 // My Solution:
+function helloWorld() {
+    const str = "Hello World!"
+    console.log(str)
+}
