@@ -13,3 +13,6 @@
 // "Zach" --> 18
 
 // My Solution:
+function howManyLightsabersDoYouOwn(name) {
+    return name === "Zach" ? 18 : 0
+}
