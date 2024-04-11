@@ -6,3 +6,15 @@
 // All values will be positive integers or floats, or zero.
 
 // My Solution:
+function plural(n) {
+    if (n === 1) {
+        return false
+    } else {
+        return true
+    }
+}
+
+// Other Solution:
+function plural(n) {
+    return n !== 1;
+}
