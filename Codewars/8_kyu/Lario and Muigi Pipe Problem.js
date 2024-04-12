@@ -13,3 +13,12 @@
 // Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
 
 // My Solution:
+function pipeFix(numbers) {
+    const low = Math.min(...numbers)
+    const top = Math.max(...numbers)
+    let res = []
+    for (let i = low; i <= top; i++) {
+        res.push(i)
+    }
+    return res
+}
