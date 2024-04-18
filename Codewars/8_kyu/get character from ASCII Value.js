@@ -9,3 +9,6 @@
 // For ASCII table, you can refer to http://www.asciitable.com/
 
 // My Solution:
+function getChar(c) {
+    return String.fromCharCode(c)
+}
