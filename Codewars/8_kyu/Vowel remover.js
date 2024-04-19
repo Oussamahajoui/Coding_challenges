@@ -10,3 +10,13 @@
 // y is not considered a vowel for this kata
 
 // My Solution:
+function shortcut(string) {
+    let res = []
+    let vowels = ["a", "e", "i", "o", "u"]
+    for (const c of string) {
+        if (!vowels.includes(c.toLowerCase())) {
+            res.push(c)
+        }
+    }
+    return res.join('')
+}
