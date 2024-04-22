@@ -6,3 +6,18 @@
 // You should not remove or add elements from/to the array.
 
 // My Solution:
+function twoSort(s) {
+    s.sort()
+    let first = s[0]
+    let res = []
+    for (let c of first) {
+        res.push(c)
+        res.push('***')
+    }
+    return res.slice(0, res.length - 1).join('')
+}
+
+// Other solution:
+function twoSort(s) {
+    return s.sort()[0].split('').join('***');
+}
