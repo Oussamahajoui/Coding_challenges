@@ -6,3 +6,6 @@
 // * [9, 2, 0, 7]  -> [7, 0, 2, 9]
 
 // My Solution:
+function reverseList(list) {
+    return list.reverse()
+}
