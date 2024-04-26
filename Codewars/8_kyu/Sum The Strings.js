@@ -15,3 +15,6 @@
 // Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
 
 // My Solution:
+function sumStr(a, b) {
+    return String(Number(a) + Number(b))
+}
