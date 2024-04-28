@@ -12,3 +12,19 @@
 // As usual, your function/method should be pure, i.e. it should not mutate the original string.
 
 // My Solution:
+String.prototype.toAlternatingCase = function () {
+    let res = []
+    function isUpperCase(x) {
+        return x.toUpperCase() === x
+    }
+    for (const c of this) {
+        if (isUpperCase(c)) {
+            res.push(c.toLowerCase())
+        } else {
+            res.push(c.toUpperCase())
+        }
+    }
+
+    return res.join('')
+
+}
