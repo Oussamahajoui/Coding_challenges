@@ -8,3 +8,10 @@
 // --> [1, 2, 3, 4]
 
 // My Solution:
+function between(a, b) {
+    let res = []
+    for (let i = a; i <= b; i++) {
+        res.push(i)
+    }
+    return res
+}
