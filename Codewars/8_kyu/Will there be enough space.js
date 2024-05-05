@@ -15,3 +15,15 @@
 // cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
 
 // My Solution:
+function enough(cap, on, wait) {
+    if (cap >= on + wait) {
+        return 0
+    } else {
+        return Math.abs(cap - on - wait)
+    }
+}
+
+// Other Soltions:
+function enough(cap, on, wait) {
+    return Math.max(wait + on - cap, 0);
+}
