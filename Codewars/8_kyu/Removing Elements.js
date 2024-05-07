@@ -7,3 +7,6 @@
 // None of the arrays will be empty, so you don't have to worry about that!
 
 // My Solution:
+function removeEveryOther(arr) {
+    return arr.filter((e, idx) => idx % 2 === 0)
+}
