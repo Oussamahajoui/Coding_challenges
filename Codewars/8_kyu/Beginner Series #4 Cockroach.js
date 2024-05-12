@@ -7,3 +7,11 @@
 // Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
 
 // My Solution:
+function cockroachSpeed(s) {
+    //km --> cm == *100000
+    //hr --> s == * 3600
+    return Math.floor((s * 100000) / 3600)
+}
+
+// Other Solution:
+const cockroachSpeed = s => Math.floor(s / 0.036);
