@@ -15,3 +15,6 @@
 // Note: base is a non-negative number, factor is a positive number.
 
 // My Solution:
+function checkForFactor(base, factor) {
+    return base % factor === 0
+}
