@@ -8,3 +8,10 @@
 // Good Luck!
 
 // My Solution:
+function doubleChar(str) {
+    let res = ""
+    for (let c of str) {
+        res += c.repeat(2)
+    }
+    return res
+}
