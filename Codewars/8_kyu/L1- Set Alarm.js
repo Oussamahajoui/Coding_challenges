@@ -10,3 +10,13 @@
 // false    | false    => false
 
 // My Solution:
+function setAlarm(employed, vacation) {
+    if (employed && !vacation) {
+        return true
+    } else {
+        return false
+    }
+}
+
+// Other solution:
+const setAlarm = (employed, vacation) => employed && !vacation;
