@@ -7,3 +7,6 @@
 // "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 // My Solution:
+function stringToArray(string) {
+    return string.split(' ')
+}
