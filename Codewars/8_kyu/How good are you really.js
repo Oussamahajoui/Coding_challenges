@@ -11,3 +11,12 @@
 // Your points are not included in the array of your class's points. Do not forget them when calculating the average score!
 
 // My Solution:
+function betterThanAverage(classPoints, yourPoints) {
+    let avg = classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length
+    return yourPoints > avg ? true : false
+}
+
+// Another one:
+function betterThanAverage(classPoints, yourPoints) {
+    return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
+}
