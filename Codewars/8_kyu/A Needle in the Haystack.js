@@ -12,3 +12,6 @@
 // ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
 
 // My Solution:
+function findNeedle(haystack) {
+    return "found the needle at position " + haystack.indexOf("needle")
+}
