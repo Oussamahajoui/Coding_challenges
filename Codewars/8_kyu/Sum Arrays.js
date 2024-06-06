@@ -19,3 +19,13 @@
 // Advanced users may find this extremely easy and can easily write this in one line.
 
 // My Solution
+function sum(numbers) {
+    let res = 0
+    numbers.forEach((x) => res += x)
+    return res
+};
+
+// Other Solution
+function sum(numbers) {
+    return numbers.reduce((a, b) => a + b, 0);
+}
