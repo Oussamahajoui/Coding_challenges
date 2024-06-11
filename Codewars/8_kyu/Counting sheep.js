@@ -14,3 +14,12 @@
 // Hint: Don't forget to check for bad values like null/undefined
 
 // My Solution
+function countSheeps(sheep) {
+    let res = 0
+    for (s of sheep) {
+        if (s === true) {
+            res += 1
+        }
+    }
+    return res
+}
