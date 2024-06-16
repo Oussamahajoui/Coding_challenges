@@ -10,3 +10,7 @@
 // Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
 
 //My Solution
+
+function makeNegative(num) {
+    return (num <= 0) ? num : -num
+}
