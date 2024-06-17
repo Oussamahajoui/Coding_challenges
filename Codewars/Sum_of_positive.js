@@ -5,3 +5,12 @@
 // Note: if there is nothing to sum, the sum is default to 0.
 
 // My Solution
+function positiveSum(arr) {
+    let res = 0
+    arr.forEach((a) => {
+        if (a >= 0) {
+            res += a
+        }
+    })
+    return res
+}
