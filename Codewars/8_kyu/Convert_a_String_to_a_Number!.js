@@ -10,3 +10,6 @@
 // "-7" --> -7
 
 // My Solution
+const stringToNumber = function (str) {
+    return Number(str);
+}
