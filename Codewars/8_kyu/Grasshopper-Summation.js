@@ -7,3 +7,10 @@
 // 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
 // My Solution
+var summation = function (num) {
+    let res = 0
+    for (i = 1; i <= num; i++) {
+        res += i
+    }
+    return res
+}
