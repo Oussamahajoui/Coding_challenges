@@ -16,3 +16,11 @@
 // 0 <= s <= 59
 
 // My Solution
+function past(h, m, s) {
+    return h * 60 * 60 * 1000 + m * 60 * 1000 + s * 1000
+}
+
+// Dryer way
+function past(h, m, s) {
+    return ((h * 3600) + (m * 60) + s) * 1000;
+}
