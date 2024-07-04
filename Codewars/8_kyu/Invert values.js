@@ -7,3 +7,6 @@
 // You can assume that all values are integers. Do not mutate the input array.
 
 // My Solution
+function invert(array) {
+    return array.map((x) => -x);
+}
