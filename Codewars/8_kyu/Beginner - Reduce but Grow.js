@@ -4,3 +4,6 @@
 // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
 // My Solution:
+function grow(x) {
+    return x.reduce((acc, curr) => acc * curr, 1)
+}
