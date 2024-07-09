@@ -6,3 +6,6 @@
 // Return true if the array contains the value, false if not.
 
 // My Solution:
+function check(a, x) {
+    return a.includes(x)
+}
