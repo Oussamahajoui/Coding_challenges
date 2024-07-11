@@ -10,3 +10,12 @@
 // countBy(2,5) === [2,4,6,8,10]
 
 // My Solution:
+function countBy(x, n) {
+    let res = []
+    let m = 1
+    while (m <= n) {
+        res.push(x * m)
+        m += 1
+    }
+    return res
+}
