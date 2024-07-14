@@ -19,3 +19,14 @@
 // 0 <= y <= 4
 
 // My Solution:
+function points(games) {
+    let points = 0
+    games.forEach((e) => {
+        if (e[0] > e[2]) {
+            points += 3
+        } else if (e[0] == e[2]) {
+            points += 1
+        }
+    })
+    return points
+}
