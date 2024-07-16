@@ -6,3 +6,24 @@
 // For example, when the input is green, output should be yellow.
 
 // My Solution:
+function updateLight(current) {
+    if (current === "green") {
+        return "yellow"
+    } else if (current === "yellow") {
+        return "red"
+    } else {
+        return "green"
+    }
+}
+
+// Other solution:
+function updateLight(current) {
+    switch (current) {
+        case 'green':
+            return 'yellow';
+        case 'yellow':
+            return 'red';
+        default:
+            return 'green';
+    }
+}
