@@ -4,3 +4,13 @@
 // P.S. Each array includes only integer numbers. Output is a number too.
 
 // My Solution:
+function arrayPlusArray(arr1, arr2) {
+    let res = 0
+    arr1.forEach((e, idx) => { res += e + arr2[idx] })
+    return res
+}
+
+// Other Solution:
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+}
