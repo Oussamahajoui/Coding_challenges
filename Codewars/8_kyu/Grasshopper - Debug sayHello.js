@@ -7,3 +7,6 @@
 // Hello, Mr. Spock
 
 // My Solution:
+function sayHello(name) {
+    return `Hello, ${name}`
+}
