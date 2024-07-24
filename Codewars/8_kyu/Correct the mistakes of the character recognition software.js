@@ -11,3 +11,23 @@
 // The test cases contain numbers only by mistake.
 
 // My Solution:
+function correct(string) {
+    let res = []
+    for (let c of string) {
+        if (c === '5') {
+            res.push('S')
+        } else if (c === '0') {
+            res.push('O')
+        } else if (c === '1') {
+            res.push('I')
+        } else {
+            res.push(c)
+        }
+    }
+    return res.join("")
+}
+
+// Other Solution:
+function correct(string) {
+    return string.replaceAll('0', 'O').replaceAll('1', 'I').replaceAll('5', 'S');
+}
