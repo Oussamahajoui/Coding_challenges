@@ -8,3 +8,8 @@
 // If you can, try writing it in one line of code.
 
 // My Solution:
+function findDifference(a, b) {
+    let volA = a.reduce((cur, cum) => cur * cum, 1)
+    let volB = b.reduce((cur, cum) => cur * cum, 1)
+    return Math.abs(volA - volB)
+}
