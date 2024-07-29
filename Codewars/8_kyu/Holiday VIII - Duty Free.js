@@ -10,3 +10,6 @@
 // All inputs will be integers. Please return an integer. Round down.
 
 // My Solution:
+function dutyFree(normPrice, discount, hol) {
+    return Math.trunc(hol / (normPrice * (discount / 100)))
+}
