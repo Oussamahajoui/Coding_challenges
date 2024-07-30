@@ -10,3 +10,10 @@
 // Good Luck!
 
 // My Solution:
+function calculateAge(birth, year) {
+    return year - birth === 1 ? 'You are 1 year old.' :
+        birth - year === 1 ? 'You will be born in 1 year.' :
+            birth < year ? `You are ${year - birth} years old.` :
+                birth === year ? 'You were born this very year!' :
+                    `You will be born in ${birth - year} years.`
+}
