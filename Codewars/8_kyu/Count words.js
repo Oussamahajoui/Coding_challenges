@@ -19,3 +19,7 @@
 // Doublecheck that words with chars like -, ', ` are counted right.
 
 // My Solution:
+function countWords(str) {
+    return str.trim().replace('\ufeff', ' ').split(' ')
+        .filter((e) => e !== '').length
+}
