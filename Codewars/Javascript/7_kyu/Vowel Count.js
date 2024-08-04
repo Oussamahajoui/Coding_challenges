@@ -6,3 +6,13 @@
 // The input string will only consist of lower case letters and/or spaces.
 
 // My Solution:
+function getCount(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let res = 0
+    for (const c of str) {
+        if (vowels.includes(c)) {
+            res += 1
+        }
+    }
+    return res
+}
