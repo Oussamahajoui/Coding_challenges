@@ -9,3 +9,6 @@
 // Input: 123456789 Output: 987654321
 
 // My Solution:
+function descendingOrder(n) {
+    return parseFloat(n.toString().split('').sort((a, b) => b.localeCompare(a)).join(''))
+}
