@@ -6,3 +6,6 @@
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
 // My Solution:
+function sumTwoSmallestNumbers(numbers) {
+    return numbers.sort((a, b) => a - b).slice(0, 2).reduce((a, b) => a + b, 0)
+}
