@@ -28,3 +28,11 @@
 // There are no fractions of people. At the end of each year, the population count is an integer: 252.8 people round down to 252 persons.
 
 // My Solution:
+function nbYear(p0, percent, aug, p) {
+    let year = 0
+    while (p0 < p) {
+        p0 = Math.floor(p0 * (1 + (percent / 100))) + aug
+        year++
+    }
+    return year
+}
