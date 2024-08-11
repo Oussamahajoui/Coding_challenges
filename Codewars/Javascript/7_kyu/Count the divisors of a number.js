@@ -11,3 +11,15 @@
 // Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
 
 // My Solution:
+function getDivisorsCnt(n) {
+    let res = 0
+    if (n % Math.sqrt(n) === 0) {
+        res += 1
+    }
+    for (let i = 1; i < Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            res += 2
+        }
+    }
+    return res
+}
