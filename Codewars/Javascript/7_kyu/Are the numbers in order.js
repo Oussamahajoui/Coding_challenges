@@ -15,3 +15,7 @@
 // N.B. If your solution passes all fixed tests but fails at the random tests, make sure you aren't mutating the input array.
 
 // My Solution:
+function inAscOrder(arr) {
+    let sortedArr = [...arr].sort((a, b) => a - b)
+    return arr.every((e, idx) => e === sortedArr[idx])
+}
