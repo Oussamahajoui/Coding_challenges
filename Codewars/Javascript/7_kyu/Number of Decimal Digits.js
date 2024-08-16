@@ -4,3 +4,16 @@
 // All inputs will be valid.
 
 // My Solution:
+function digits(n) {
+    let res = 0
+    let num = n.toString().split('')
+    for (const c of num) {
+        res += 1
+    }
+    return res
+}
+
+//Better way:
+function digits(n) {
+    return n.toString().length;
+}
