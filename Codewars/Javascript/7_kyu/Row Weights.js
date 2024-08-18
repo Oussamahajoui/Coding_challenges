@@ -23,3 +23,8 @@
 // The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
 
 // My Solution:
+function rowWeights(array) {
+    let team1 = array.filter((e, idx) => idx % 2 === 0).reduce((a, b) => a + b, 0)
+    let team2 = array.filter((e, idx) => idx % 2 !== 0).reduce((a, b) => a + b, 0)
+    return [team1, team2]
+}
