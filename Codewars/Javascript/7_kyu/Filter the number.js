@@ -10,3 +10,12 @@
 
 
 // My Solution:
+var filterString = function (value) {
+    let res = ''
+    for (const c of value) {
+        if (c >= '0' && c <= '9') {
+            res += c
+        }
+    }
+    return parseFloat(res)
+}
