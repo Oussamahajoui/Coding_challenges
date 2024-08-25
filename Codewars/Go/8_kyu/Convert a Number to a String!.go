@@ -9,3 +9,14 @@
 // -100 --> "-100"
 
 // My Solution:
+package kata
+
+import "fmt" // package for printing to console
+import "strconv" // package for conversion str/int Itoa = int to Str : Atoi = Str to int
+
+
+func NumberToString(n int) string {
+  v := strconv.Itoa(n)
+  fmt.Println(v) // just to console log all test in every line to view
+  return v
+}
