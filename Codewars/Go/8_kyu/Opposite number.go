@@ -8,3 +8,8 @@
 // -34: 34
 
 // My Solution:
+package kata
+
+func Opposite(value int) int {
+  return -value
+}
