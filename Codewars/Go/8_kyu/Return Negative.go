@@ -10,3 +10,12 @@
 // Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
 
 // My Solution:
+package kata
+
+import "math"
+
+func MakeNegative(x int) int {
+  v := float64(x) 
+  res := math.Abs(v)
+  return int(-res)
+}
