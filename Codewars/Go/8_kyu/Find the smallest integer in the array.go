@@ -8,3 +8,16 @@
 // You can assume, for the purpose of this kata, that the supplied array will not be empty.
 
 // My Solution:
+package kata
+
+func SmallestIntegerFinder(numbers []int) int {
+  v := numbers[0]
+  for i:= 1; i < len(numbers); i++{
+    if numbers[i] < v{
+      v = numbers[i]
+    }
+  }
+  return v
+}
+
+// Should just use slices Min, for some reason it's not available yet in codewars
