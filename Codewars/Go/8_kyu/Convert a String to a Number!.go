@@ -13,3 +13,26 @@
 // "-7" --> -7
 
 // My Solution:
+package kata
+
+import "strconv"
+
+
+func StringToNumber(str string) int {
+    i,err := strconv.Atoi(str)
+    if err != nil {
+      return 0
+    }
+  return i
+}
+
+
+// Other way as we do not expect error in inputs here:
+package kata
+
+import "strconv"
+
+func StringToNumber(str string) int {
+  n, _ := strconv.Atoi(str)
+  return n
+}
