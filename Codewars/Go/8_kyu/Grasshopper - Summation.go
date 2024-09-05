@@ -8,3 +8,12 @@
 // 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
 // My Solution:
+package kata
+
+func Summation(n int) int {
+    sum := 0
+    for i:= 1; i <= n; i++ {
+      sum += i
+    }
+  return sum
+}
