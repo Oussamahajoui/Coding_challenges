@@ -14,3 +14,14 @@
 // Hint: Don't forget to check for bad values like null/undefined
 
 // My Solution:
+package kata
+
+func CountSheeps(numbers []bool) int {
+  res := 0
+  for _,val := range numbers{
+    if val == true{
+      res += 1
+    }
+  }
+  return res
+}
