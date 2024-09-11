@@ -14,3 +14,10 @@
 // time = 11.8--> litres = 5
 
 // My Solution:
+package kata
+
+import "math"
+
+func Litres(time float64) int {
+  return int(math.Floor(time * 0.5))
+}
