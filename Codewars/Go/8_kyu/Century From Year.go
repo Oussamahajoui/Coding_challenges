@@ -14,3 +14,10 @@
 // Note: this kata uses strict construction as shown in the description and the examples, you can read more about it here
 
 // My Solution:
+package kata
+
+import "math"
+
+func century(year int) int {
+ return int(math.Ceil(float64(year)/100))
+}
