@@ -6,3 +6,12 @@
 // [1, 2, 3] --> [2, 4, 6]
 
 // My Solution:
+package kata
+
+func Maps(x []int) []int {
+  res := []int{}
+  for _,num := range x{
+    res = append(res, num * 2) 
+  }
+  return res
+}
