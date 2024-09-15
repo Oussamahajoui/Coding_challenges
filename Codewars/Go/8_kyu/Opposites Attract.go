@@ -4,3 +4,11 @@
 // Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 
 // My Solution:
+package kata
+
+func LoveFunc(flower1, flower2 int) bool {
+  if (flower1 % 2) == (flower2 % 2){
+    return false
+  }
+  return true
+}
