@@ -7,3 +7,13 @@
 // You can assume that all values are integers. Do not mutate the input array.
 
 // My Solution:
+package kata
+
+
+func Invert(arr []int) []int {
+  res := []int{}
+  for _,num := range arr{
+    res = append(res, -1 * num)
+  }
+  return res
+}
