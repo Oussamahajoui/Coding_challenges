@@ -4,3 +4,12 @@
 // Return true if yes, false otherwise :)
 
 // My Solution:
+package kata
+
+func Hero(bullets, dragons int) bool {
+  if dragons * 2 > bullets{
+    return false
+  }else{
+    return true
+  }
+}
