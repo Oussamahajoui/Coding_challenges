@@ -4,3 +4,12 @@
 // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
 // My Solution:
+package kata
+
+func Grow(arr []int) (res int){
+  res = 1
+  for _,num := range arr {
+    res *= num
+  }
+  return res
+}
