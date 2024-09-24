@@ -4,3 +4,17 @@
 // Note: input will never be an empty string
 
 // My Solution:
+package kata
+
+
+func FakeBin(x string) string {
+    res := ""
+    for _,n := range x {
+      if n >= '5' {
+        res += "1"
+      }else{
+        res += "0"
+      }
+    }  
+  return res
+}
