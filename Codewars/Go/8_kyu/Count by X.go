@@ -10,3 +10,12 @@
 // countBy(2,5) === [2,4,6,8,10]
 
 // My Solution:
+package kata
+
+
+func CountBy(x, n int) (res[]int) {
+  for i:= 1;i <= n; i++{
+    res = append(res, x * i)
+  }
+  return res
+}
