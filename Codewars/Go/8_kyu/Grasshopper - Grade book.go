@@ -13,3 +13,40 @@
 // Fundamentals
 
 // My Solution:
+package kata
+
+func GetGrade(a,b,c int) rune {
+  grade:= (a+b+c)/3
+  switch{
+  case grade < 60:
+    return 'F'
+  case grade < 70:
+  return 'D'
+  case grade < 80:
+  return 'C'
+  case grade < 90:
+  return 'B'
+  case grade <= 100:
+  return 'A'
+    }
+  return '0'
+}
+
+//Better syntax:
+package kata
+
+func GetGrade(a,b,c int) rune {
+    switch mean := (a+b+c)/3; {
+    case mean < 60: 
+    return 'F'
+    case mean < 70: 
+    return 'D'
+    case mean < 80: 
+    return 'C'
+    case mean < 90: 
+    return 'B'
+    default: 
+    return 'A'
+    }
+    
+}
