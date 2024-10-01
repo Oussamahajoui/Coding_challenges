@@ -8,3 +8,20 @@
 // 1 <= month <= 12
 
 // My Solution:
+package kata
+
+func QuarterOf(month int) int {
+  switch{
+    case month < 4: return 1
+    case month < 7: return 2
+    case month < 10: return 3
+    default: return 4
+  }
+}
+
+//Other way:
+package kata
+
+func QuarterOf(month int) int {
+  return (month + 2) / 3
+}
