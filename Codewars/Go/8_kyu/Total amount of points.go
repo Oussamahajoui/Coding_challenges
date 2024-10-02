@@ -19,3 +19,15 @@
 // 0 <= y <= 4
 
 // My Solution:
+package kata
+
+func Points(games []string) (res int) {
+  for _,g := range games{
+    if g[0] > g[2] {
+      res += 3
+    } else if g[0] == g[2]{
+      res += 1
+    }
+  }
+  return res
+}
