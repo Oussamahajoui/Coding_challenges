@@ -8,3 +8,8 @@
 // https://en.wikipedia.org/wiki/Triangle
 
 // My Solution:
+package kata
+
+func OtherAngle(a int, b int) int {
+    return 180 - a - b 
+}
