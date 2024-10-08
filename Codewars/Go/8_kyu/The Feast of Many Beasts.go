@@ -6,3 +6,8 @@
 // Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
 
 // My Solution:
+package kata
+
+func Feast(beast string, dish string) bool {
+  return beast[0] == dish[0] && beast[len(beast)-1] == dish[len(dish)-1] 
+}
