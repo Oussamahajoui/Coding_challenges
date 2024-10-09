@@ -15,3 +15,8 @@
 // Note: base is a non-negative number, factor is a positive number.
 
 // My Solution:
+package kata
+
+func CheckForFactor(base int, factor int) bool {
+    return base % factor == 0
+}
