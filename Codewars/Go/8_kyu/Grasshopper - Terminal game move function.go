@@ -8,3 +8,8 @@
 // move(3, 6) should equal 15
 
 // My Solution:
+package kata
+
+func Move(position int, roll int) int {
+    return position + 2 * roll
+}
