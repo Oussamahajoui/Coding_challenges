@@ -8,3 +8,12 @@
 // --> [1, 2, 3, 4]
 
 // My Solution:
+package kata
+
+
+func Between(a, b int) (res []int) {
+      for i:=a; i<= b;i++ {
+        res = append(res,i)
+      }
+  return res
+}
