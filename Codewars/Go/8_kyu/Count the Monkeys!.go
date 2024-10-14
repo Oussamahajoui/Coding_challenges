@@ -9,3 +9,12 @@
 //  1 --> [1]
 
 // My Solution:
+package kata
+
+func monkeyCount(n int) []int {
+  res := []int{}
+  for i := 1; i<= n; i++ {
+    res = append(res, i)
+  }
+  return res
+}
