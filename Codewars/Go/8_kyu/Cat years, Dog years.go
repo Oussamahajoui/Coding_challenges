@@ -19,3 +19,23 @@
 // +5 dog years for each year after that
 
 // My Solution:
+package kata
+
+func CalculateYears(years int) (result [3]int) {
+  catYears := 0
+  dogYears := 0
+  for i:= 1; i <= years; i++{
+    if i == 1{
+      catYears += 15
+      dogYears += 15
+    } else if i== 2 {
+      catYears += 9
+      dogYears += 9
+    } else{
+      catYears += 4
+      dogYears += 5
+    }
+  }
+
+  return [3]int{years, catYears, dogYears}
+}
