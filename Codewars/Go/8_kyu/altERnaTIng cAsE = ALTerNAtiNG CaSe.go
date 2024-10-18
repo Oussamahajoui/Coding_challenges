@@ -12,3 +12,20 @@
 // As usual, your function/method should be pure, i.e. it should not mutate the original string.
 
 // My Solution:
+package kata
+
+import (
+  "unicode"
+  "strings"
+  )
+
+func ToAlternatingCase(str string) (res string) {
+  for _, char := range str{
+    if unicode.IsUpper(char){
+      res += strings.ToLower(string(char))
+    } else {
+      res += strings.ToUpper(string(char))
+    }
+  }
+  return res
+}
