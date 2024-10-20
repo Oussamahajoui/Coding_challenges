@@ -21,3 +21,15 @@
 // expressionsMatter(9, 1, 1) ==> 18, because 9 * (1 + 1) = 18.
 
 // My Solution:
+package kata
+
+func ExpressionMatter(a int, b int, c int) int {
+  values := []int{(a+b)*c , a * b* c, a + b + c, a * (b + c)}
+  max := values[0]
+  for _, val := range values{
+    if val > max{
+    max = val
+    }
+  }  
+  return max
+}
