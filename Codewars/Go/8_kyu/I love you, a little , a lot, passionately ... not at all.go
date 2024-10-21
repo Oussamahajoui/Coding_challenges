@@ -14,3 +14,17 @@
 // Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a given number of petals. The number of petals is always greater than 0.
 
 // My Solution:
+package kata
+
+func HowMuchILoveYou(i int) string {
+  p := i % 6
+  switch p {
+    case 0: return "not at all"
+    case 1: return "I love you"
+    case 2: return "a little"
+    case 3: return "a lot"
+    case 4: return "passionately"
+    case 5: return "madly"
+    default: return "I need to stop doing this game..."
+  }
+}
