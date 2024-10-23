@@ -4,3 +4,11 @@
 // For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 
 // My Solution:
+package kata
+
+func FindMultiples(integer, limit int) (res[]int) {
+  for i:= 1; i * integer <= limit; i++ {
+    res = append(res, i * integer)
+  }
+  return res
+}
