@@ -18,3 +18,17 @@
 // Note: newlines should be added between rows, but there should be no trailing newline at the end. If you're unsure about the format, look at the sample tests.
 
 // My Solution:
+package kata
+
+import (
+  "fmt"
+  "strings"
+  )
+
+func MultiTable(number int) string {
+  result := ""
+  for i := 1; i <= 10; i++ {
+    result += fmt.Sprintf("%d * %d = %d\n", i, number, (i * number))
+  }
+  return strings.TrimSuffix(result, "\n")
+}
