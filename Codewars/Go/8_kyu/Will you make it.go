@@ -6,3 +6,8 @@
 // Function should return true if it is possible and false if not.
 
 // My Solution:
+package kata
+
+func ZeroFuel(distanceToPump int, mpg int, fuelLeft int) bool {
+  return distanceToPump <= mpg * fuelLeft
+}
