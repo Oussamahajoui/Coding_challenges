@@ -14,3 +14,24 @@
 // Happy coding!
 
 // My Solution:
+package kata
+
+import "sort"
+
+
+func MergeArrays(arr1, arr2 []int) (res[]int) {
+  my_set := map[int]struct{}{}
+  for _, val := range arr1{
+    my_set[val] =struct{}{}
+  }
+  for _, val := range arr2{
+    my_set[val] =struct{}{}
+  }
+  
+  for key,_ := range my_set{
+    res = append(res, key)
+  }
+  
+  sort.Ints(res)
+  return res
+}
