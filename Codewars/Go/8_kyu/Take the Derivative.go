@@ -16,3 +16,12 @@
 // The exponent will never be 1, and neither number will ever be 0
 
 // My Solution:
+package kata
+
+import "strconv"
+
+
+func Derive(coefficient, exponent int) string {
+  res := strconv.Itoa(coefficient * exponent) + "x^" + strconv.Itoa(exponent-1)
+  return res
+}
