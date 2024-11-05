@@ -21,3 +21,22 @@
 // Note: you shouldn't escape the \n, it should work as a new line.
 
 // My Solution:
+package kata
+
+import (
+  "strings"
+  "fmt"
+  )
+
+
+func ToCsvText(array [][]int) string {
+  var rows []string
+  for _, row := range array {
+		var rowStr []string
+		for _, num := range row {
+			rowStr = append(rowStr, fmt.Sprintf("%d", num))
+		}
+		rows = append(rows, strings.Join(rowStr, ","))
+	}
+	return strings.Join(rows, "\n")
+}
