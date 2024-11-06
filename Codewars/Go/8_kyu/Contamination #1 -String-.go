@@ -16,3 +16,16 @@
 // text after  = "zzz"
 
 // My Solution:
+package kata
+
+
+func Contamination(text, char string) string {
+  if text == "" {
+    return ""
+  }
+  res := ""
+  for range text {
+    res += char
+  }
+  return res
+}
