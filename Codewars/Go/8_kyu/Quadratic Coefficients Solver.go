@@ -22,3 +22,9 @@
 // When x1 == x2, this means the root has the multiplicity of two
 
 // My Solution:
+package kata
+
+
+func Quadratic(x1, x2 int) [3]int {
+  return [3]int{1, -(x1 + x2),x1*x2}
+}
