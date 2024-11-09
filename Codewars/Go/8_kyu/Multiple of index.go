@@ -9,3 +9,16 @@
 // [-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85, 72, 0, 68]
 
 // My Solution:
+package kata
+
+func multipleOfIndex (ints []int) (res []int) {
+  for i, e := range ints {
+    if (i == 0 && e == 0) {
+      res = append(res, e)
+    } else if (i != 0 && e % i == 0){
+      res = append(res, e)
+    }
+    
+  }
+  return res
+}
