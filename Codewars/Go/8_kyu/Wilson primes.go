@@ -30,3 +30,9 @@
 // Your task is to create a function that returns true if the given number is a Wilson prime and false otherwise.
 
 // My Solution:
+package kata
+
+
+func AmIWilson(n int) bool {
+  return n == 5 || n == 13 || n == 563
+}
