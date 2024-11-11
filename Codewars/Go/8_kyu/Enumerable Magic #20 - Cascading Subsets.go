@@ -10,3 +10,15 @@
 // As you can see, the lists are cascading; ie, they overlap, but never out of order.
 
 // My Solution:
+package kata
+
+
+func EachCons(arr []int, n int) [][]int {
+  var res [][]int
+  for i := 0 ; i<= len(arr); i++ {
+    idx := i + n
+    if idx  > len(arr) {break}
+    res = append(res, arr[i:i+n])
+  }
+  return res
+}
