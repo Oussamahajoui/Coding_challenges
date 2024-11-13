@@ -10,3 +10,14 @@
 // Note: for this kata y isn't considered a vowel.
 
 // My Solution:
+package kata
+
+import "strings"
+
+func Disemvowel(comment string) string {
+  vowels := []string{"a", "e", "i", "o", "u","A", "E", "I", "O", "U"}
+  for _, c := range vowels {
+    comment = strings.Replace(comment, c, "", -1)
+  }
+  return comment
+}
