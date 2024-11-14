@@ -11,3 +11,28 @@
 // Output string must be two numbers separated by a single space, and highest number is first.
 
 // My Solution:
+package kata
+
+import (
+  "strings"
+  "strconv"
+  "math"
+  )
+
+func HighAndLow(in string) string {
+  numbers := strings.Split(in, " ")
+  
+  biggest := math.MinInt
+  smallest := math.MaxInt
+  for _, num := range numbers {
+    val, _ := strconv.Atoi(num) 
+    if val > biggest {
+      biggest = val
+    }
+    if val < smallest {
+      smallest = val
+    }
+  }
+  
+  return strconv.Itoa(biggest) + " " + strconv.Itoa(smallest)
+}
