@@ -9,3 +9,18 @@
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 // My Solution:
+package kata
+
+import "strings"
+
+func ToJadenCase(str string) string {
+  var res string
+  words := strings.Split(str, " ")
+  for i , w := range words {
+    if i > 0 {
+      res += " "
+    }
+    res += strings.Title(w)
+  }
+  return res
+}
