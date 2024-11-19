@@ -8,3 +8,14 @@
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
 // My Solution:
+package kata
+
+import "strings"
+
+func Accum(s string) string {
+  res := []string{}
+  for i, char := range s{
+    res = append(res, strings.ToUpper(string(char)) + strings.Repeat(strings.ToLower(string(char)), i))
+  }
+  return strings.Join(res[:], "-")
+}
