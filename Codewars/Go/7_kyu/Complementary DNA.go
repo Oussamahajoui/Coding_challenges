@@ -13,3 +13,25 @@
 // "GTAT" --> "CATA"
 
 // My Solution:
+package kata
+
+import "strings"
+
+func DNAStrand(dna string) string {
+  lookup := map[string]string{"A" : "T",
+            "T" : "A",
+            "C": "G",
+            "G": "C"}
+  res := []string{}
+  for _, char := range dna {
+    res = append(res, lookup[string(char)])
+  }
+  return strings.Join(res, "")
+}
+
+// Better way:
+func DNAStrand(dna string) string {
+	// your code here
+	replacer := strings.NewReplacer("A", "T", "T", "A", "G", "C", "C", "G")
+	  return(replacer.Replace(dna))
+  }
