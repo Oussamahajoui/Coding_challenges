@@ -13,3 +13,20 @@
 // Your function should only return a number, not the explanation about how you get that number.
 
 // My Solution:
+package kata
+
+
+func GetSum(a, b int) (res int) {
+  if a == b {
+    return a
+  }
+  if a > b {
+    tmp := b
+    b = a
+    a = tmp
+  }
+  for i := a; i<=b; i++{
+    res += i
+  }
+  return res
+}
