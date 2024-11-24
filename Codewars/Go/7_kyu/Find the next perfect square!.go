@@ -11,3 +11,15 @@
 // 114 --> -1  #  because 114 is not a perfect square
 
 // My Solution:
+package kata
+
+import "math"
+
+func FindNextSquare(sq int64) int64 {
+  a := math.Sqrt(float64(sq))
+  if math.Floor(a) == a {
+    return int64(math.Pow((a+1),2))
+  } else {
+  return -1
+  }
+}
