@@ -28,3 +28,15 @@
 // There are no fractions of people. At the end of each year, the population count is an integer: 252.8 people round down to 252 persons.
 
 // My Solution:
+package kata
+
+import "math"
+
+func NbYear(p0 int, percent float64, aug int, p int) int {
+  year := 0
+  for p0 < p {
+    p0 = int(math.Floor(float64(p0) * (1+(percent/100)))) + aug
+    year += 1
+  }
+  return year
+}
