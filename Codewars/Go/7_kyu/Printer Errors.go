@@ -17,3 +17,18 @@
 // printer_error(s) => "8/22"
 
 // My Solution:
+package kata
+
+import "strconv"
+
+func PrinterError(s string) string {
+  errors := 0
+  for _, c := range s {
+    if (c > 'm') {
+      errors += 1
+    }
+  }
+  errors_s := strconv.Itoa(errors)
+  totallength := strconv.Itoa(len(s))
+  return errors_s + "/" + totallength
+}
