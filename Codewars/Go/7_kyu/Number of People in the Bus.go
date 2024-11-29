@@ -12,3 +12,18 @@
 // The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
 
 // My Solution:
+package kata
+
+func Number(busStops [][2]int) int {
+  var res int
+  for i, stop := range busStops{
+    for j, val := range stop {
+      if (i* len(stop) + j) % 2 == 0 {
+        res += val
+      } else {
+        res -= val
+      }
+    }
+  }
+  return res
+}
