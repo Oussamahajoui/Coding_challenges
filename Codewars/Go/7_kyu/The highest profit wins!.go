@@ -13,3 +13,19 @@
 // All arrays or lists will always have at least one element, so you don't need to check the length. Also, your function will always get an array or a list, you don't have to check for null, undefined or similar.
 
 // My Solution:
+package kata
+
+import "math"
+
+
+func MinMax(arr []int) [2]int {
+  small := float64(arr[0])
+  large := float64(arr[0])
+  
+  for _, num := range arr{
+    small = math.Min(small, float64(num))
+    large = math.Max(large, float64(num))
+  }
+  
+  return [2]int{int(small),int(large)}
+}
