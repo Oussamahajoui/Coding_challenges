@@ -64,3 +64,14 @@
 // 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
 
 // My Solution:
+package kata
+
+import "fmt"
+
+func SeriesSum(n int) string {
+  res := float64(0)
+  for i := 0; i < n ; i++ {
+    res += float64(1) / (1+float64(i)*3)
+  }
+  return fmt.Sprintf("%.2f", res)
+}
