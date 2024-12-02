@@ -11,3 +11,20 @@
 // Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
 
 // My Solution:
+package kata
+
+import "math"
+
+func Divisors(n int)int{
+  res := 0
+  sqrtN := int(math.Sqrt(float64(n)))
+  if (n % sqrtN == 0){
+    res += 1
+  }
+  for i:= 1; i < sqrtN ; i ++ {
+    if n % i == 0 {
+      res += 2
+    }
+  }
+  return res
+}
