@@ -7,3 +7,11 @@
 // solution(NULL)              # should return NULL
 
 // My Solution:
+package kata
+
+import "sort"
+
+func SortNumbers(numbers []int) []int {
+	sort.Ints(numbers)
+	return numbers
+}
