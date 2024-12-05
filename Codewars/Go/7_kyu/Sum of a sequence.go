@@ -13,3 +13,13 @@
 // 1,5,3  --> 5 (1 + 4)
 
 // My Solution:
+package kata
+
+
+func SequenceSum(start, end, step int) int {
+  var res int
+  for i := start; i <= end; i += step{
+    res += i
+  }
+  return res
+}
