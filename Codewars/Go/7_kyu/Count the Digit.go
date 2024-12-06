@@ -19,3 +19,19 @@
 // Note that 121 has twice the digit 1.
 
 // My Solution:
+package kata
+
+import (
+  "strings"
+  "strconv"
+) 
+func NbDig(n int, d int) int {
+  count := 0
+  s := strconv.Itoa(d)
+  for i:= 0; i <= n; i++ {
+    num := i * i
+    count += strings.Count(strconv.Itoa(num), s)
+  }
+  
+  return count
+}
