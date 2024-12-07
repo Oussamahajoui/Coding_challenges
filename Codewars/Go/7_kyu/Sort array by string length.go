@@ -10,3 +10,13 @@
 // All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
 
 // My Solution:
+package kata
+
+import "sort"
+
+func SortByLength(arr []string) []string {
+  sort.Slice(arr, func(i,j int) bool {
+    return len(arr[i]) < len(arr[j])
+  })
+  return arr
+}
