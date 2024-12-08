@@ -14,3 +14,17 @@
 // [output] a string
 
 // My Solution:
+package kata
+
+import "unicode"
+
+func ReverseLetters(s string) string {
+  runes := []rune(s)
+  var res []rune 
+  for i := len(runes) - 1; i >= 0; i-- { 
+    if unicode.IsLetter(runes[i]) {
+      res = append(res, runes[i])
+    }
+  }
+  return string(res)
+}
