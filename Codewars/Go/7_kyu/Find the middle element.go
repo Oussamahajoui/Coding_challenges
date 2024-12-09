@@ -14,3 +14,25 @@
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 // My Solution:
+package kata
+
+
+func Gimme(array [3]int) int {
+  smallest := array[0]
+  largest := array[0]
+  for _,v := range array {
+    if v < smallest{  
+    smallest = v
+    }else if v > largest {
+      largest = v
+    }
+  }
+  
+  var res int
+  for i, _ := range array {
+    if array[i] != smallest && array[i] != largest {
+      res = i
+    }
+  }
+  return res
+}
