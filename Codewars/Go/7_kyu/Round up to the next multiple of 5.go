@@ -18,3 +18,10 @@
 // You can assume that all inputs are valid integers.
 
 // My Solution:
+package kata
+
+import "math"
+
+func RoundToNext5(n int) int {
+  return int(math.Ceil(float64(n)/5)*5)
+}
