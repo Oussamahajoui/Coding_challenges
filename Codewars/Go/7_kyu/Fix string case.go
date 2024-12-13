@@ -11,3 +11,42 @@
 // More examples in test cases. Good luck!
 
 // My Solution:
+package kata
+
+import (
+  "unicode"
+  "strings"
+)
+
+func solve(str string) string {
+  var up int
+  var low int
+  for _, v := range str{
+    if unicode.IsUpper(v) {
+      up++
+    } else {
+      low++
+    }
+  }
+  res := []string{}
+  if up > low {
+    for _, v := range str{
+      res = append(res, string(unicode.ToUpper(v)))
+    }
+  } else {
+    for _, v := range str{
+      res = append(res, string(unicode.ToLower(v)))
+    }
+  }
+  return strings.Join(res, "")
+}
+
+// simpler way:
+func solve(s string) string {
+	l, u := 0, 0
+	for _, c := range s { if unicode.IsUpper(c) { u++ } else { l++ } }
+  
+	if l >= u { return strings.ToLower(s) }
+  
+	return strings.ToUpper(s)
+  }
