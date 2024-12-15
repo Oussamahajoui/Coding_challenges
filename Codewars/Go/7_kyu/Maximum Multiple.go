@@ -26,3 +26,16 @@
 // (185) is divisible by (37) , (185) is less than or equal to bound (200) , and (185) is > 0 .
 
 // My Solution:
+package kata
+
+import "math"
+
+func MaxMultiple(d, b int) int {
+  var res float64
+  for i:= 0; i <= b; i++{
+    if i % d == 0 {
+      res = math.Max(float64(i), res)
+    }
+  }
+  return int(res)
+}
