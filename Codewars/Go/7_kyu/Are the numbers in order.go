@@ -15,3 +15,16 @@
 // N.B. If your solution passes all fixed tests but fails at the random tests, make sure you aren't mutating the input array.
 
 // My Solution:
+package kata
+
+func InAscOrder(numbers []int) bool {
+  val := numbers[0]
+  for _, v := range numbers[1:] {
+    if v < val {
+      return false
+    } else {
+      val = v
+    }
+  }
+  return true
+}
