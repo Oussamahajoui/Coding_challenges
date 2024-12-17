@@ -4,3 +4,16 @@
 // All inputs will be valid.
 
 // My Solution:
+package kata
+
+func Digits(n uint64) int {
+  var res int
+  if n == 0 {
+    return 1
+  }
+  for n > 0 {
+    n = n / 10
+    res++
+  }
+  return res
+}
