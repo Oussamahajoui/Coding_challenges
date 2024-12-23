@@ -12,3 +12,12 @@
 // The input will always be made of only lowercase letters and will never be empty.
 
 // My Solution:
+package kata
+
+func WordsToMarks(s string) int {
+    res := 0
+    for _, c := range s {
+        res += int(c - 'a' + 1)
+    }
+    return res
+}
