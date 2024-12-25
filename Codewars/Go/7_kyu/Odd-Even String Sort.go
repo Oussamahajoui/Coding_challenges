@@ -13,3 +13,19 @@
 // Tested strings are at least 8 characters long.
 
 // My Solution:
+package kata
+
+import "strings"
+
+func SortMyString(s string) string {
+  var grp1 []string
+  var grp2 []string
+  for i, _ := range s {
+    if i % 2 == 0 {
+      grp1 = append(grp1, string(s[i]))
+    } else {
+      grp2 = append(grp2, string(s[i]))
+    }
+  }
+  return strings.Join(grp1, "") + " " + strings.Join(grp2, "")
+}
