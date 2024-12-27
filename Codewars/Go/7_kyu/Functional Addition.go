@@ -7,3 +7,10 @@
 // addOne(3) // 4
 
 // My Solution:
+package kata
+
+func Add(n int) func(int)int {
+  return func(x int) int{
+    return n + x
+  }
+}
