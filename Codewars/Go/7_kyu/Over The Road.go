@@ -22,3 +22,8 @@
 // To solve this, you need to think of a way to do the kata without making massive lists or huge for loops. Read the discourse for some inspiration :)
 
 // My Solution:
+package kata
+
+func OverTheRoad(address int, n int) int {
+  return n * 2 - address  + 1 
+}
