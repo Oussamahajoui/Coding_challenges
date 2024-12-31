@@ -11,3 +11,26 @@
 // Good luck!
 
 // My Solution:
+package kata
+
+import "strings"
+
+func solve(slice []string) []int {
+  var res []int
+  
+  for _, word := range slice{
+    word = strings.ToLower(word)
+    
+    val := 0
+    
+    for i := 0; i < len(word) ; i++ {
+      char := word[i]
+      
+      if i == int(char - 'a') {
+        val++
+      }
+    }
+    res = append(res, val)
+  }
+  return res
+}
