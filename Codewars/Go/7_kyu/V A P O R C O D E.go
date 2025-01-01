@@ -10,3 +10,18 @@
 // "Why isn't my code working?"  -->  "W  H  Y  I  S  N  '  T  M  Y  C  O  D  E  W  O  R  K  I  N  G  ?"
 
 //  My Solution:
+package kata
+
+import "strings"
+
+
+func Vaporcode(s string) string {
+  s = strings.ReplaceAll(s, " ", "")
+  var res []string
+  
+  for _, char := range s {
+    res = append(res, strings.ToUpper(string(char)))
+    res = append(res, "  ")
+  }
+  return strings.TrimSpace(strings.Join(res, ""))
+}
