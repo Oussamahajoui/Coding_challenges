@@ -14,3 +14,28 @@
 // }
 
 // My Solution:
+package orderedcount
+
+// Use the preloaded Tuple struct as return type
+// type Tuple struct {
+// 	Char  rune
+// 	Count int
+// }
+
+func OrderedCount(text string) []Tuple {
+  counts := make(map[rune]int)
+  var order []rune
+  
+  for _, char := range text {
+    if _, exists := counts[char]; !exists {
+      order = append(order, char)
+    }
+    counts[char]++
+  }
+  
+  res := []Tuple{}
+  for _, char := range order{
+    res =  append(res, Tuple{Char : char , Count: counts[char] })
+  }
+  return res
+}
