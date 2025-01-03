@@ -37,3 +37,36 @@
 // The input strings are separated by , instead of \n. The output strings should be separated by \r instead of \n. See "Sample Tests".
 
 // My Solution:
+package kata
+
+import "strings"
+
+func reverse(s string) string{
+  runes := []rune(s)
+  
+  for i,j := 0, len(s) - 1; i < j; i,j = i + 1, j - 1 {
+    runes[i] , runes[j] = runes[j] , runes[i]
+  }
+  return string(runes)
+}
+
+func VertMirror(s string) string {
+  res := []string{}
+  words := strings.Split(s, "\n")
+  for _, word := range words {
+    res = append(res, reverse(word))
+  }
+  return strings.Join(res, "\n")
+}
+func HorMirror(s string) string {
+  lines := strings.Split(s, "\n")
+	
+	for i, j := 0, len(lines)-1; i < j; i, j = i+1, j-1 {
+		lines[i], lines[j] = lines[j], lines[i]
+	}
+	return strings.Join(lines, "\n")
+}
+type FParam func(string) string
+func Oper(f FParam, x string) string {
+    return f(x)
+}
