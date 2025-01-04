@@ -26,3 +26,16 @@
 // seven(477557101) should return [28, 7]
 
 // My Solution:
+package kata
+
+func Seven(n int64) []int {
+  count := 0
+  for (n > 99){
+    digit := n % 10
+    restN := n / 10
+    n = restN - 2 * digit
+    count += 1
+  }
+  
+  return []int{int(n),count}
+}
