@@ -21,3 +21,18 @@
 //     (with card the total price is 235, with tickets 240)
 
 // My Solution:
+package kata
+
+import "math"
+
+func Movie(card, ticket int, perc float64) int {
+  costA := 0
+  costB := float64(card)
+  n := 0
+  for math.Ceil(costB) >= float64(costA) {
+    costA += ticket
+    n += 1
+    costB += float64(ticket) * math.Pow(perc, float64(n))
+  }
+  return n
+}
