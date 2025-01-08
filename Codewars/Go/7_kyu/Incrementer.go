@@ -12,3 +12,14 @@
 //                                        #  9+3 = 12  -->  2
 
 // My Solution:
+package kata
+
+
+func Incrementer(n []int) []int {
+  var res []int
+  for i,val := range n {
+    a := (val + i + 1) % 10
+    res = append(res, a)
+  }
+  return res
+}
