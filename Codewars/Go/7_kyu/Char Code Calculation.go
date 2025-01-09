@@ -16,3 +16,38 @@
 //                        6
 
 // My Solution:
+package kata
+
+import (
+  "strings"
+  "strconv"  
+)
+
+func sumDigits(s string) float64{
+  var sum float64
+  
+  for i := 0; i < len(s) ; i++{
+    num, err := strconv.ParseFloat(string(s[i]), 64)
+    if err == nil {
+      sum += num
+    }
+  }
+  return sum
+}
+
+func Calc(s string) int {
+  total1 := ""
+  for i := 0; i< len(s); i++{
+    total1 += strconv.Itoa(int(s[i]))
+  }
+  
+  total2 := strings.ReplaceAll(total1, "7" , "1")
+  
+  sum1 := sumDigits(total1)
+  sum2 := sumDigits(total2)
+  
+  res := sum1 - sum2
+  
+  
+  return int(res)
+}
