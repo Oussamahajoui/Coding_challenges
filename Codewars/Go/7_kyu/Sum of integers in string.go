@@ -3,3 +3,27 @@
 // Note: only positive integers will be tested.
 
 // My Solution:
+package kata
+
+import (
+  "regexp"
+  "strconv"
+)
+
+func SumOfIntegersInString(s string) int {
+  re := regexp.MustCompile("[^0-9]+")
+  parts := re.Split(s, -1)
+  
+  res := 0
+  
+  for _, part := range parts{
+    if part != "" {
+      num, err := strconv.Atoi(part)
+      if err == nil {
+        res += num
+      }
+    }
+  }
+  
+  return res
+}
