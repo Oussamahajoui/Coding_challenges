@@ -20,3 +20,22 @@
 // and for any array arr: contain_all_rots("", arr) --> true
 
 // My Solution:
+package kata
+
+func ContainAllRots(s string, arr []string) bool { 
+    for i:= 0; i < len(s); i++{
+      concatStr := s[i:] + s[:i]
+      
+      found := false
+      for _, v := range arr{
+        if v == concatStr {
+          found = true
+          break
+        }
+      }
+      if (!found){
+    return false
+    } 
+    }
+  return true
+}
