@@ -10,3 +10,25 @@
 // Good luck!
 
 // My Solution:
+package kata
+
+import "strings"
+
+func Capitalize(st string, arr []int) string {
+  letters := strings.Split(st, "")
+  for i, val := range letters {
+        if contains(arr, i) {
+            letters[i] = strings.ToUpper(val)
+        }}
+    
+    return strings.Join(letters, "")
+}
+
+func contains(arr []int, value int) bool {
+    for _, v := range arr {
+        if v == value {
+            return true
+        }
+    }
+    return false
+}
