@@ -34,3 +34,19 @@
 // or return `-1` or ERROR or Nothing or None depending on the language.
 
 // My Solution:
+package kata
+
+import "math"
+
+func NewAvg(arr []float64, navg float64) int64 {
+   var arrSum float64
+  for _, v := range arr {
+    arrSum += v
+  }
+  var x float64
+  x = navg * float64(len(arr) + 1) - arrSum
+  if x <= 0 {
+    return -1
+  }
+  return int64(math.Ceil(x))
+}
