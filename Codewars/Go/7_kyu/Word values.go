@@ -12,3 +12,25 @@
 // Good luck!
 
 // My Solution:
+package kata
+
+import "strings"
+
+func NameValue(my_list []string) []int {
+	refLetter := 'a'
+  ref := int(refLetter)
+  var res []int
+  
+  for idx, e := range my_list{
+    totalVal := 0
+    e = strings.ReplaceAll(e, " ", "")
+    
+    for _ , c := range e{
+      value := int(c) - ref + 1
+      totalVal += value
+    }
+    
+    res = append(res, totalVal *(idx+1))
+  }
+  return res
+}
