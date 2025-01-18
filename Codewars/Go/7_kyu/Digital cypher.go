@@ -35,3 +35,16 @@
 // Encode("masterpiece",1939);  ==>  [ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]
 
 // My Solution:
+package kata
+
+import "strconv"
+
+func Encode(str string, key int) []int {
+	k := strconv.Itoa(key)
+  res := make([]int, len(str))
+  
+  for i, c := range str{
+    res[i] = int(c-'a'+1) + int(k[i%len(k)]-'0')
+  }
+  return res
+}
